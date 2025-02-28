@@ -257,6 +257,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../howtos/model-measurements.html">How to model quantities and measurements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/port-linkml.html">Porting LinkML tools to other programming languages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/multidimensional-arrays.html">Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/model-property-graphs.html">How to make a property graph schema</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/generate-ai-prompts.html">How to Generate AI prompts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/deprecating-elements.html">Deprecating elements while maintaining PURLs and other URIs</a></li>
 </ul>
@@ -3842,6 +3843,17 @@ if an override is not found</p>
 <dt class="sig sig-object std" id="cmdoption-linkml-generate-full-shacl-include-annotations">
 <span id="cmdoption-linkml-generate-full-shacl-exclude-annotations"></span><span class="sig-name descname"><span class="pre">--include-annotations</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--exclude-annotations</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-generate-full-shacl-include-annotations" title="Permalink to this definition">#</a></dt>
 <dd><p>Use –include-annotations to include annotations of slots, types, and classes in the generated SHACL shapes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-linkml-generate-full-shacl-exclude-imports">
+<span id="cmdoption-linkml-generate-full-shacl-include-imports"></span><span class="sig-name descname"><span class="pre">--exclude-imports</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--include-imports</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-generate-full-shacl-exclude-imports" title="Permalink to this definition">#</a></dt>
+<dd><p>Use –exclude-imports to exclude imported elements from the generated SHACL shapes. This is useful when extending a substantial ontology to avoid large output files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Default<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>

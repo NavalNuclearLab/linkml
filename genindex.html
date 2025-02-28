@@ -255,6 +255,7 @@
 <li class="toctree-l2"><a class="reference internal" href="howtos/model-measurements.html">How to model quantities and measurements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="howtos/port-linkml.html">Porting LinkML tools to other programming languages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="howtos/multidimensional-arrays.html">Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howtos/model-property-graphs.html">How to make a property graph schema</a></li>
 <li class="toctree-l2"><a class="reference internal" href="howtos/generate-ai-prompts.html">How to Generate AI prompts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="howtos/deprecating-elements.html">Deprecating elements while maintaining PURLs and other URIs</a></li>
 </ul>
@@ -633,6 +634,15 @@
           <li><a href="generators/erdiagram.html#cmdoption-gen-erdiagram-exclude-attributes">gen-erdiagram command line option</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-erdiagram-exclude-attributes">linkml-generate-(full)-erdiagram command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --exclude-imports
+
+        <ul>
+          <li><a href="generators/shacl.html#cmdoption-gen-shacl-exclude-imports">gen-shacl command line option</a>
+</li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-exclude-imports">linkml-generate-(full)-shacl command line option</a>
 </li>
         </ul></li>
         <li>
@@ -1029,6 +1039,15 @@
 
         <ul>
           <li><a href="cli/validate.html#cmdoption-linkml-validate-D">linkml-validate command line option</a>, <a href="code/validator.html#cmdoption-linkml-validate-D">[1]</a>, <a href="data/validating-data.html#cmdoption-linkml-validate-D">[2]</a>
+</li>
+        </ul></li>
+        <li>
+    --include-imports
+
+        <ul>
+          <li><a href="generators/shacl.html#cmdoption-gen-shacl-exclude-imports">gen-shacl command line option</a>
+</li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-exclude-imports">linkml-generate-(full)-shacl command line option</a>
 </li>
         </ul></li>
         <li>
@@ -5952,11 +5971,15 @@
 </li>
           <li><a href="generators/shacl.html#cmdoption-gen-shacl-include-annotations">--exclude-annotations</a>
 </li>
+          <li><a href="generators/shacl.html#cmdoption-gen-shacl-exclude-imports">--exclude-imports</a>
+</li>
           <li><a href="generators/shacl.html#cmdoption-gen-shacl-f">--format</a>
 </li>
           <li><a href="generators/shacl.html#cmdoption-gen-shacl-im">--importmap</a>
 </li>
           <li><a href="generators/shacl.html#cmdoption-gen-shacl-include-annotations">--include-annotations</a>
+</li>
+          <li><a href="generators/shacl.html#cmdoption-gen-shacl-exclude-imports">--include-imports</a>
 </li>
           <li><a href="generators/shacl.html#cmdoption-gen-shacl-log_level">--log_level</a>
 </li>
@@ -8117,11 +8140,15 @@
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-include-annotations">--exclude-annotations</a>
 </li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-exclude-imports">--exclude-imports</a>
+</li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-f">--format</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-im">--importmap</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-include-annotations">--include-annotations</a>
+</li>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-exclude-imports">--include-imports</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-shacl-log_level">--log_level</a>
 </li>
