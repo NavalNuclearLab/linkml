@@ -222,7 +222,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../generators/shacl.html">SHACL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/owl.html">OWL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/markdown.html">Markdown</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generators/docgen.html">Docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generators/docgen.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/erdiagram.html">ER Diagrams</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/yuml.html">YUML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/plantumlgen.html">PlantUML Diagram Generator</a></li>
@@ -916,7 +916,7 @@ YAML, and including it when necessary but not by default (e.g. in documentation 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-linkml-generate-full-doc-template-directory">
 <span class="sig-name descname"><span class="pre">--template-directory</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;template_directory&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-generate-full-doc-template-directory" title="Permalink to this definition">#</a></dt>
-<dd><p>Folder in which custom templates are kept</p>
+<dd><p>Path to the directory with custom jinja2 templates</p>
 </dd></dl>
 
 <dl class="std option">
@@ -983,7 +983,7 @@ YAML, and including it when necessary but not by default (e.g. in documentation 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-linkml-generate-(full)-doc-0">
 <span id="cmdoption-linkml-generate-full-doc-directory"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--directory</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-generate-(full)-doc-0" title="Permalink to this definition">#</a></dt>
-<dd><p><strong>Required</strong> Folder to which document files are written</p>
+<dd><p><strong>Required</strong> Path to the directory where you want the Markdown files to be written to</p>
 </dd></dl>
 
 <dl class="std option">
@@ -2468,7 +2468,11 @@ YAML, and including it when necessary but not by default (e.g. in documentation 
 </section>
 <section id="linkml-generate-full-markdown">
 <h4>markdown<a class="headerlink" href="#linkml-generate-full-markdown" title="Permalink to this heading">#</a></h4>
-<p>Generate markdown documentation of a LinkML model</p>
+<p>Generate markdown documentation of a LinkML model.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><cite>gen-markdown</cite> is deprecated. Please use <cite>gen-doc</cite> instead.</p>
+</div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>linkml<span class="w"> </span>generate<span class="w"> </span><span class="o">(</span>full<span class="o">)</span><span class="w"> </span>markdown<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>YAMLFILE
 </pre></div>
 </div>
