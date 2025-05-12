@@ -239,6 +239,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/excel.html">Excel Spreadsheet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/csv.html">CSV</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/yaml.html">Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generators/pandera.html">Pandera</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../generators/common/index.html">Common</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Common</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../generators/common/build.html">Build</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../generators/common/lifecycle.html">Lifecycle</a></li>
@@ -590,6 +591,19 @@
             <span class="s2">&quot;embedded mermaid class diagrams) from a LinkML schema&quot;</span>
         <span class="p">),</span>
         <span class="n">recommendation</span><span class="o">=</span><span class="s2">&quot;Update to use `gen-doc`&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">Deprecation</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;gen-yuml&quot;</span><span class="p">,</span>
+        <span class="c1"># the last update to any code in yumlgen.py was in v1.8.7</span>
+        <span class="c1"># we can start considering it as deprecated from this version</span>
+        <span class="n">deprecated_in</span><span class="o">=</span><span class="n">SemVer</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">&quot;1.8.7&quot;</span><span class="p">),</span>
+        <span class="n">removed_in</span><span class="o">=</span><span class="n">SemVer</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">&quot;1.10.0&quot;</span><span class="p">),</span>
+        <span class="n">message</span><span class="o">=</span><span class="p">(</span>
+            <span class="s2">&quot;gen-yuml has been deprecated and is no longer supported. &quot;</span>
+            <span class="s2">&quot;It has been replaced by more feature-rich diagram generators such as &quot;</span>
+            <span class="s2">&quot;gen-doc (embedded mermaid diagrams), gen-plantuml, gen-mermaid-class-diagram, and gen-erdiagram.&quot;</span>
+        <span class="p">),</span>
+        <span class="n">recommendation</span><span class="o">=</span><span class="s2">&quot;Update to use `gen-doc`, `gen-plantuml`, `gen-mermaid-class-diagram`, or `gen-erdiagram`&quot;</span><span class="p">,</span>
     <span class="p">),</span>
 <span class="p">)</span>  <span class="c1"># type: tuple[Deprecation, ...]</span>
 
