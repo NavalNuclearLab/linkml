@@ -583,9 +583,9 @@
     --directory
 
         <ul>
-          <li><a href="generators/docgen.html#cmdoption-gen-doc-0">gen-doc command line option</a>
+          <li><a href="generators/docgen.html#cmdoption-gen-doc-d">gen-doc command line option</a>
 </li>
-          <li><a href="cli/generate.html#cmdoption-linkml-generate-(full)-doc-0">linkml-generate-(full)-doc command line option</a>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-d">linkml-generate-(full)-doc command line option</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-graphviz-d">linkml-generate-(full)-graphviz command line option</a>
 </li>
@@ -1054,13 +1054,13 @@
     --include
 
         <ul>
-          <li><a href="generators/docgen.html#cmdoption-gen-doc-d">gen-doc command line option</a>
+          <li><a href="generators/docgen.html#cmdoption-gen-doc-include">gen-doc command line option</a>
 </li>
           <li><a href="generators/json-schema.html#cmdoption-gen-json-schema-d">gen-json-schema command line option</a>
 </li>
           <li><a href="generators/project-generator.html#cmdoption-gen-project-I">gen-project command line option</a>
 </li>
-          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-d">linkml-generate-(full)-doc command line option</a>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-include">linkml-generate-(full)-doc command line option</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-json-schema-d">linkml-generate-(full)-json-schema command line option</a>
 </li>
@@ -3640,7 +3640,7 @@
     -d
 
         <ul>
-          <li><a href="generators/docgen.html#cmdoption-gen-doc-0">gen-doc command line option</a>, <a href="generators/docgen.html#cmdoption-gen-doc-d">[1]</a>
+          <li><a href="generators/docgen.html#cmdoption-gen-doc-d">gen-doc command line option</a>
 </li>
           <li><a href="generators/json-schema.html#cmdoption-gen-json-schema-d">gen-json-schema command line option</a>
 </li>
@@ -3650,7 +3650,7 @@
 </li>
           <li><a href="generators/sparql.html#cmdoption-gen-sparql-d">gen-sparql command line option</a>
 </li>
-          <li><a href="cli/generate.html#cmdoption-linkml-generate-(full)-doc-0">linkml-generate-(full)-doc command line option</a>, <a href="cli/generate.html#cmdoption-linkml-generate-full-doc-d">[1]</a>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-d">linkml-generate-(full)-doc command line option</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-golr-views-d">linkml-generate-(full)-golr-views command line option</a>
 </li>
@@ -4765,10 +4765,10 @@
           <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.TypeDefinition.class_name">(linkml_runtime.linkml_model.meta.TypeDefinition attribute)</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.class_name_mappings">class_name_mappings() (linkml_runtime.utils.schemaview.SchemaView method)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.PydanticModule.class_names">class_names (linkml.generators.pydanticgen.template.PydanticModule property)</a>
 </li>
         <li><a href="code/utils.html#linkml.utils.generator.Generator.class_or_type_for">class_or_type_for() (linkml.utils.generator.Generator method)</a>
@@ -4858,6 +4858,8 @@
 </li>
         </ul></li>
         <li><a href="code/utils.html#linkml.utils.helpers.convert_to_snake_case">convert_to_snake_case() (in module linkml.utils.helpers)</a>
+</li>
+        <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.copy_schema">copy_schema() (linkml_runtime.utils.schemaview.SchemaView method)</a>
 </li>
         <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.ArrayExpression.created_by">created_by (linkml_runtime.linkml_model.meta.ArrayExpression attribute)</a>
 
@@ -5280,7 +5282,7 @@
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-dialect">--dialect</a>
 </li>
-          <li><a href="generators/docgen.html#cmdoption-gen-doc-0">--directory</a>
+          <li><a href="generators/docgen.html#cmdoption-gen-doc-d">--directory</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-example-directory">--example-directory</a>
 </li>
@@ -5292,7 +5294,7 @@
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-im">--importmap</a>
 </li>
-          <li><a href="generators/docgen.html#cmdoption-gen-doc-d">--include</a>
+          <li><a href="generators/docgen.html#cmdoption-gen-doc-include">--include</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-include-top-level-diagram">--include-top-level-diagram</a>
 </li>
@@ -5348,7 +5350,7 @@
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-V">--version</a>
 </li>
-          <li><a href="generators/docgen.html#cmdoption-gen-doc-0">-d</a>, <a href="generators/docgen.html#cmdoption-gen-doc-d">[1]</a>
+          <li><a href="generators/docgen.html#cmdoption-gen-doc-d">-d</a>
 </li>
           <li><a href="generators/docgen.html#cmdoption-gen-doc-f">-f</a>
 </li>
@@ -7207,7 +7209,7 @@
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-dialect">--dialect</a>
 </li>
-          <li><a href="cli/generate.html#cmdoption-linkml-generate-(full)-doc-0">--directory</a>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-d">--directory</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-example-directory">--example-directory</a>
 </li>
@@ -7219,7 +7221,7 @@
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-im">--importmap</a>
 </li>
-          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-d">--include</a>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-include">--include</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-include-top-level-diagram">--include-top-level-diagram</a>
 </li>
@@ -7275,7 +7277,7 @@
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-V">--version</a>
 </li>
-          <li><a href="cli/generate.html#cmdoption-linkml-generate-(full)-doc-0">-d</a>, <a href="cli/generate.html#cmdoption-linkml-generate-full-doc-d">[1]</a>
+          <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-d">-d</a>
 </li>
           <li><a href="cli/generate.html#cmdoption-linkml-generate-full-doc-f">-f</a>
 </li>
@@ -9704,6 +9706,8 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="code/utils.html#linkml.utils.generator.Generator.namespaces">namespaces (linkml.utils.generator.Generator attribute)</a>
 </li>
+        <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.namespaces">namespaces() (linkml_runtime.utils.schemaview.SchemaView method)</a>
+</li>
         <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.ArrayExpression.narrow_mappings">narrow_mappings (linkml_runtime.linkml_model.meta.ArrayExpression attribute)</a>
 
         <ul>
@@ -10085,6 +10089,8 @@
 </li>
         <li><a href="code/utils.html#linkml.utils.mergeutils.set_from_schema">set_from_schema() (in module linkml.utils.mergeutils)</a>
 </li>
+        <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.set_modified">set_modified() (linkml_runtime.utils.schemaview.SchemaView method)</a>
+</li>
         <li><a href="developers/schemabuilder.html#linkml.utils.schema_builder.SchemaBuilder.set_slot">set_slot() (linkml.utils.schema_builder.SchemaBuilder method)</a>
 </li>
         <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.SchemaDefinition.settings">settings (linkml_runtime.linkml_model.meta.SchemaDefinition attribute)</a>
@@ -10125,10 +10131,10 @@
 </li>
         <li><a href="code/utils.html#linkml.utils.schemaloader.SchemaLoader.slot_name_for">slot_name_for() (linkml.utils.schemaloader.SchemaLoader static method)</a>
 </li>
-        <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.slot_name_mappings">slot_name_mappings() (linkml_runtime.utils.schemaview.SchemaView method)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.slot_name_mappings">slot_name_mappings() (linkml_runtime.utils.schemaview.SchemaView method)</a>
+</li>
         <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.ClassDefinition.slot_names_unique">slot_names_unique (linkml_runtime.linkml_model.meta.ClassDefinition attribute)</a>
 
         <ul>
