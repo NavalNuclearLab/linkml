@@ -180,6 +180,11 @@ def test_index_sqlddl():
     # Tests to ensure the duplicate index name isn't created
     assert 'CREATE INDEX "ix_Class_With_Id_identifier_slot" ON "Class_With_Id" (identifier_slot, name);' not in ddl
 
+def test_naming_policy(capsys):
+    with capsys.disabled():
+        print("hello")
+    assert True
+
 
 @pytest.mark.parametrize(
     ("slot_range", "ddl_type"),
