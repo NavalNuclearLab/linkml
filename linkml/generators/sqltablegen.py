@@ -155,7 +155,7 @@ class SQLTableGenerator(Generator):
     def serialize(self, **kwargs: dict[str, Any]) -> str:
         return self.generate_ddl(**kwargs)
 
-    def generate_ddl(self, naming_policy: SqlNamingPolicy = None, **kwargs: dict[str, Any]) -> str:
+    def generate_ddl(self, naming_policy: SqlNamingPolicy = None, strip_quotes = False, **kwargs: dict[str, Any]) -> str:
         """
         Generate a DDL using the schema in self.schema.
 
@@ -181,6 +181,8 @@ class SQLTableGenerator(Generator):
         def sql_name(n: str) -> str:
             if not naming_policy or naming_policy == SqlNamingPolicy.preserve:
                 return n
+            if strip_quotes:
+                n = n.replace('\'','').replace("\"",'')
             if naming_policy == SqlNamingPolicy.underscore:
                 return underscore(n)
             if naming_policy == SqlNamingPolicy.camelcase:
