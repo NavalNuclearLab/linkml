@@ -308,6 +308,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../howtos/generate-ai-prompts.html">How to Generate AI prompts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/deprecating-elements.html">Deprecating elements while maintaining PURLs and other URIs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/ontologies-as-values.html">Using ontology terms as values in data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/skip-logic.html">How to implement skip logic in LinkML</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples of use</a></li>
@@ -4021,6 +4022,12 @@ if an override is not found</p>
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-linkml-generate-full-rust-handwritten-lib">
+<span id="cmdoption-linkml-generate-full-rust-no-handwritten-lib"></span><span class="sig-name descname"><span class="pre">--handwritten-lib</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-handwritten-lib</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-generate-full-rust-handwritten-lib" title="Link to this definition">¶</a></dt>
+<dd><p>When enabled, place generated sources under src/generated and create a shim lib.rs for handwritten code. The shim is only created on first run and left untouched on subsequent regenerations.</p>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-linkml-generate-full-rust-s">
 <span id="cmdoption-linkml-generate-full-rust-serde"></span><span class="sig-name descname"><span class="pre">-s</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--serde</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-generate-full-rust-s" title="Link to this definition">¶</a></dt>
 <dd><p>Add ‘serde’ to Cargo.toml default features. Source always includes #[cfg(feature=”serde”)] derives/attrs; this flag only enables the crate feature by default.</p>
@@ -5252,7 +5259,7 @@ is conformant to the same LinkML schema.</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-linkml-generate-full-yarrrml-source">
 <span class="sig-name descname"><span class="pre">--source</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;source&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-generate-full-yarrrml-source" title="Link to this definition">¶</a></dt>
-<dd><p>YARRRML source shorthand, e.g., data.json~jsonpath or data.csv~csv</p>
+<dd><p>YARRRML source shorthand, e.g., data.json~jsonpath or data.csv~csv (TSV works too)</p>
 </dd></dl>
 
 <dl class="std option">
