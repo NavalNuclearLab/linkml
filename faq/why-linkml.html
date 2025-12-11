@@ -1,18 +1,19 @@
 <!doctype html>
 <html class="no-js" lang="en" data-content_root="../">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="FAQ: Modeling" href="modeling.html" /><link rel="prev" title="FAQ: General" href="general.html" />
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="FAQ: Modeling" href="modeling.html"><link rel="prev" title="FAQ: General" href="general.html">
+        <link rel="prefetch" href="https://linkml.io/uploads/linkml-logo_color.png" as="image">
 
-    <link rel="shortcut icon" href="https://linkml.io/uploads/linkml-logo_color-no-words.png"/><!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+    <link rel="shortcut icon" href="https://linkml.io/uploads/linkml-logo_color-no-words.png"><!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
         <title>FAQ: Why LinkML - linkml documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=580074bf" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
     <link rel="stylesheet" type="text/css" href="../_static/css/common.css?v=95000900" />
     <link rel="stylesheet" type="text/css" href="../_static/css/notebooks.css?v=1ce917dd" />
     
@@ -21,8 +22,8 @@
 
 <style>
   body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
   
   }
   @media not print {
@@ -149,14 +150,10 @@
   </symbol>
 </svg>
 
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
 
 <a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
 
@@ -166,8 +163,7 @@
   <header class="mobile-header">
     <div class="header-left">
       <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
       </label>
     </div>
     <div class="header-center">
@@ -175,8 +171,7 @@
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
           <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
           <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
           <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -184,8 +179,7 @@
         </button>
       </div>
       <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
   </header>
@@ -193,7 +187,6 @@
     <div class="sidebar-container">
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
-  
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="https://linkml.io/uploads/linkml-logo_color.png" alt="Logo"/>
   </div>
@@ -210,7 +203,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">LinkML at a glance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Quick Install Guide</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../intro/tutorial.html">Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro/tutorial.html">Tutorial</a><input aria-label="Toggle navigation of Tutorial" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro/tutorial01.html">Part 1: Creating your first LinkML schema</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../intro/tutorial02.html">Part 2: Adding a container object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../intro/tutorial03.html">Part 3: Adding constraints and performing validation</a></li>
@@ -220,10 +213,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../intro/tutorial07.html">Part 7: Slots and inheritance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../intro/tutorial08.html">Part 8: Generating Projects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../intro/tutorial09.html">Part 9: Working with SQL databases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro/tutorial10.html">Part 10: Working with SQL databases</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../schemas/index.html">LinkML Schemas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of LinkML Schemas</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../schemas/index.html">LinkML Schemas</a><input aria-label="Toggle navigation of LinkML Schemas" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../schemas/models.html">Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../schemas/metadata.html">Schema Element Metadata</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../schemas/inheritance.html">Inheritance</a></li>
@@ -245,7 +237,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../schemas/expression-language.html">Expression Language</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../data/index.html">Working with Data</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Working with Data</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/index.html">Working with Data</a><input aria-label="Toggle navigation of Working with Data" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../data/conversion.html">Converting between different representations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data/validating-data.html">Data Validation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data/rdf.html">Working with RDF and LinkML</a></li>
@@ -254,7 +246,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../data/sql-databases.html">Working with data in SQL Databases</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../generators/index.html">Generators</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Generators</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../generators/index.html">Generators</a><input aria-label="Toggle navigation of Generators" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../generators/json-schema.html">JSON Schema</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/protobuf.html">ProtoBuf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/graphql.html">GraphQL</a></li>
@@ -287,7 +279,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../generators/csv.html">CSV</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/yaml.html">Yaml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/pandera.html">Pandera</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../generators/common/index.html">Common</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Common</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../generators/common/index.html">Common</a><input aria-label="Toggle navigation of Common" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../generators/common/build.html">Build</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../generators/common/lifecycle.html">Lifecycle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../generators/common/type_designators.html">Type Designators</a></li>
@@ -295,7 +287,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../howtos/index.html">How-to Guides</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of How-to Guides</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../howtos/index.html">How-to Guides</a><input aria-label="Toggle navigation of How-to Guides" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/linkml-project-cookiecutter.html">LinkML Project Cookiecutter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/collaborative-development.html">How to run a collaborative data modeling project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/recognize-structural-forms.html">How to recognize and work with different structural forms</a></li>
@@ -315,7 +307,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../ecosystem.html">The LinkML Ecosystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../specifications/linkml-spec.html">LinkML specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/contributing.html">Contribution Guidelines</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">FAQ</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of FAQ</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../get-involved/index.html">Get Involved</a><input aria-label="Toggle navigation of Get Involved" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../get-involved/Community-Meetings.html">Community Meetings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">FAQ</a><input aria-label="Toggle navigation of FAQ" checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="general.html">FAQ: General</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">FAQ: Why LinkML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="modeling.html">FAQ: Modeling</a></li>
@@ -329,7 +325,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers guide:</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../cli/index.html">CLI</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of CLI</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cli/index.html">CLI</a><input aria-label="Toggle navigation of CLI" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cli/linkml.html"><code class="docutils literal notranslate"><span class="pre">linkml</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cli/generate.html"><code class="docutils literal notranslate"><span class="pre">linkml</span> <span class="pre">generate</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cli/lint.html"><code class="docutils literal notranslate"><span class="pre">linkml</span> <span class="pre">lint</span></code></a></li>
@@ -337,7 +333,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../cli/entrypoints.html">Entrypoints</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../developers/index.html">Developers guide</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Developers guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../developers/index.html">Developers guide</a><input aria-label="Toggle navigation of Developers guide" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../developers/organization.html">GitHub Organization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/notebooks.html">Jupyter Notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/manipulating-schemas.html">Manipulating Schemas</a></li>
@@ -353,7 +349,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../developers/deprecation.html">Deprecations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../code/index.html">Code</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Code</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../code/index.html">Code</a><input aria-label="Toggle navigation of Code" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../code/metamodel.html">MetaModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/utils.html">Utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/validator.html">Validator</a></li>
@@ -386,8 +382,7 @@
   </a>
 </div>
 <div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
               <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
               <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -395,8 +390,7 @@
             </button>
           </div>
           <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
@@ -431,7 +425,6 @@
 <span class="w">      </span><span class="nt">email</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">age</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">occupation</span><span class="p">:</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 </pre></div>
 </div>
 <p>this is already useful as it states which column headers are expected in your data.</p>
@@ -762,6 +755,86 @@ LinkML, and LinkML is not restricted solely to CSVs - e.g. you can
 semantically describe JSON files with LinkML too.</p>
 <p>We are currently planning on writing a generator for CSVW JSON-LD.</p>
 </section>
+<section id="why-should-i-use-linkml-over-frictionless-data">
+<h2>Why should I use LinkML over Frictionless Data?<a class="headerlink" href="#why-should-i-use-linkml-over-frictionless-data" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://frictionlessdata.io/">Frictionless Data</a> is a framework for describing tabular and other datasets with metadata.</p>
+<p><strong>Frictionless Data</strong> provides Table Schema for describing the structure of tabular data, along with Data Package
+for bundling datasets with metadata. It’s excellent for data publishing and validation of CSVs and
+spreadsheets. If your primary use case is lightweight tabular data publishing, Frictionless may be simpler.</p>
+<p>LinkML works across JSON, YAML, RDF, SQL databases, and graph databases.  LinkML also provides built-in
+support for ontology mappings, IRIs, and semantic web integration beyond basic metadata. LinkML supports
+object-oriented modeling features.</p>
+</section>
+<section id="why-should-i-use-linkml-over-croissant">
+<h2>Why should I use LinkML over Croissant?<a class="headerlink" href="#why-should-i-use-linkml-over-croissant" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://github.com/mlcommons/croissant">Croissant</a> is a framework for describing tabular and other datasets with metadata.</p>
+<p>Croissant is a metadata format developed by MLCommons for describing machine learning datasets, including
+their structure, provenance, and content. It builds on schema.org and is designed for dataset discovery and
+reuse in machine learning contexts.</p>
+<p>LinkML offers sophisticated validation rules including patterns, ranges, and dynamic enumerations linked to ontologies,
+and can generate Python dataclasses, TypeScript interfaces, JSON-Schema, SQL DDL, and more from a single schema.</p>
+<p>If you’re specifically working with ML datasets and need schema.org compatibility, Croissant may be appropriate.</p>
+</section>
+<section id="why-should-i-use-linkml-over-schema-org">
+<h2>Why should I use LinkML over Schema.org?<a class="headerlink" href="#why-should-i-use-linkml-over-schema-org" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://schema.org">Schema.org</a> is a collaborative initiative that provides a collection of schemas (structured data vocabularies)
+used to mark up web pages so that search engines can better understand their content. It’s supported by major search
+engines including Google and Microsoft and is used by over 45 million websites.</p>
+<p>Schema.org is, at heart, a vocabulary that you can use to annotate data for use on the web. LinkML, in contrast, provides rich
+validation rules, required fields, patterns, ranges, and cardinality constraints.  Use Schema.org when you primarily
+need to mark up web pages for SEO or are describing common web entities with standard vocabularies. Use LinkML when you
+need to validate data, generate code, work across multiple formats, or require domain-specific modeling with
+constraints. You can still map your LinkML models to Schema.org terms for compatibility.</p>
+</section>
+<section id="why-should-i-use-linkml-over-bioschemas">
+<h2>Why should I use LinkML over Bioschemas?<a class="headerlink" href="#why-should-i-use-linkml-over-bioschemas" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://bioschemas.org">Bioschemas</a> is a community initiative that extends Schema.org with life sciences-specific types and properties.
+It creates profiles (usage guidelines) for Schema.org types to improve findability of biological datasets, tools,
+training materials, and other resources.
+Bioschemas profiles are guidelines; LinkML enforces constraints through validation. Bioschemas focuses on JSON-LD for
+web; LinkML supports TSV, SQL, RDF, and other formats common in bioinformatics pipelines. LinkML has sophisticated
+support for dynamic enumerations from ontologies (e.g., pulling terms from GO, MONDO, UBERON) and ontology-based
+validation.</p>
+<p>Use Bioschemas when your primary goal is to mark up biological web resources for improved search engine
+indexing and discoverability. Use LinkML when building biological data standards, databases, APIs, or analytical pipelines that require validation,
+code generation, and complex data modeling. LinkML is particularly strong for multi-institutional data integration
+projects in life sciences.</p>
+</section>
+<section id="why-should-i-use-linkml-over-dcat">
+<h2>Why should I use LinkML over DCAT?<a class="headerlink" href="#why-should-i-use-linkml-over-dcat" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://www.w3.org/TR/vocab-dcat-3/">DCAT (Data Catalog Vocabulary)</a> is a W3C RDF vocabulary designed to facilitate interoperability between data
+catalogs published on the web. It enables publishers to describe datasets and data services in a standardized way
+that catalog aggregators can consume.</p>
+<p>DCAT describes catalog metadata; LinkML models, validates and maps the actual data within datasets. But LinkML can
+also be used for modeling dataset metadata.</p>
+</section>
+<section id="why-should-i-use-linkml-over-xml-schema-xsd">
+<h2>Why should I use LinkML over XML Schema (XSD)?<a class="headerlink" href="#why-should-i-use-linkml-over-xml-schema-xsd" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://www.w3.org/TR/xmlschema11-1/">XML Schema</a> (XSD) is a W3C specification for defining the structure, content, and semantics of XML documents.
+It provides a type system, validation rules, and documentation for XML-based data exchange.LinkML uses YAML instead of
+verbose XML, making schemas much more human-friendly to author and maintain. XML Schema only works with XML. LinkML
+handles JSON, YAML, TSV, RDF, SQL, and more from a single schema definition.</p>
+<p>Use XML Schema when you’re working in an XML-centric environment, integrating with legacy systems that require XSD,
+or in industries with established XSD-based standards. Use LinkML when building new data standards, working with
+modern data formats (JSON, YAML), need multi-format support, or want developer-friendly schema authoring.
+If you need XML support, compile your LinkML schema to XSD.</p>
+</section>
+<section id="why-should-i-use-linkml-over-isa-tools">
+<h2>Why should I use LinkML over ISA-Tools?<a class="headerlink" href="#why-should-i-use-linkml-over-isa-tools" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://isa-tools.org">ISA-Tools</a> is an open-source framework built around a three-level data model:
+Investigation (project context), Study (unit of research), and Assay (analytical measurement).
+It provides rich description of experimental metadata for life sciences, environmental, and biomedical
+experiments using ISA-Tab (tab-delimited), ISA-JSON, and RDF serializations.</p>
+<p>ISA is prescriptive with its three-level hierarchy; LinkML allows arbitrary domain models tailored to your specific needs
+and works for any type of data. LinkML is domain-agnostic and used across biomedicine, environmental science,
+materials science, and other fields</p>
+<p>Use ISA-Tools when you’re submitting to repositories that require ISA-Tab format, working in metabolomics or other
+communities with established ISA adoption, or need tools specifically designed for experimental metadata management.</p>
+<p>Use LinkML when you need flexible data modeling beyond the Investigation-Study-Assay hierarchy, want to generate
+code and schemas for multiple targets, require sophisticated validation, or are building domain-specific data standards.
+LinkML is particularly strong when your data doesn’t fit the experimental metadata pattern or when you need a schema
+that serves multiple purposes (validation, documentation, code generation, and transformation).</p>
+</section>
 <section id="why-should-i-use-linkml-over-iso-11179">
 <h2>Why should I use LinkML over ISO-11179?<a class="headerlink" href="#why-should-i-use-linkml-over-iso-11179" title="Link to this heading">¶</a></h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/ISO/IEC_11179">ISO-11179</a> is an ISO standard for metadata and metadata registries. It
@@ -841,6 +914,13 @@ clarifying the connection.</p>
 <li><a class="reference internal" href="#why-should-i-use-linkml-over-owl">Why should I use LinkML over OWL?</a></li>
 <li><a class="reference internal" href="#why-should-i-use-linkml-over-custom-spreadsheets">Why should I use LinkML over custom spreadsheets?</a></li>
 <li><a class="reference internal" href="#why-should-i-use-linkml-over-csv-on-the-web">Why should I use LinkML over CSV-on-the-web?</a></li>
+<li><a class="reference internal" href="#why-should-i-use-linkml-over-frictionless-data">Why should I use LinkML over Frictionless Data?</a></li>
+<li><a class="reference internal" href="#why-should-i-use-linkml-over-croissant">Why should I use LinkML over Croissant?</a></li>
+<li><a class="reference internal" href="#why-should-i-use-linkml-over-schema-org">Why should I use LinkML over Schema.org?</a></li>
+<li><a class="reference internal" href="#why-should-i-use-linkml-over-bioschemas">Why should I use LinkML over Bioschemas?</a></li>
+<li><a class="reference internal" href="#why-should-i-use-linkml-over-dcat">Why should I use LinkML over DCAT?</a></li>
+<li><a class="reference internal" href="#why-should-i-use-linkml-over-xml-schema-xsd">Why should I use LinkML over XML Schema (XSD)?</a></li>
+<li><a class="reference internal" href="#why-should-i-use-linkml-over-isa-tools">Why should I use LinkML over ISA-Tools?</a></li>
 <li><a class="reference internal" href="#why-should-i-use-linkml-over-iso-11179">Why should I use LinkML over ISO-11179?</a></li>
 </ul>
 </li>
@@ -856,7 +936,7 @@ clarifying the connection.</p>
 </div><script src="../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     </body>
 </html>
