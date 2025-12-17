@@ -309,6 +309,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../contributing/contributing.html">Contribution Guidelines</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../get-involved/index.html">Get Involved</a><input aria-label="Toggle navigation of Get Involved" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/Community-Meetings.html">Community Meetings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-involved/workshops-and-presentations.html">Workshops and Presentations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../faq/index.html">FAQ</a><input aria-label="Toggle navigation of FAQ" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -655,10 +656,11 @@ leave the <a class="reference internal" href="#linkml.utils.deprecation.Deprecat
 <dd><p>Representation of semantic version that supports inequality comparisons.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The inequality methods _only_ test the numeric major, minor, and patch components
-of the version - ie. they do not evaluate the prerelease versions as described in the semver
-spec. This is not intended to be a general SemVer inequality calculator, but used
-only for testing deprecations</p>
+<p>The inequality methods test the numeric major, minor, and patch components
+of the version, and treat pre-release versions (rc, alpha, beta, etc.) as
+less than the corresponding release version. For example, 1.10.0-rc1 &lt; 1.10.0.
+This is not intended to be a general SemVer inequality calculator, but used
+only for testing deprecations.</p>
 </div>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="linkml.utils.deprecation.SemVer.dev">
