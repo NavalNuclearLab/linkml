@@ -258,10 +258,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../generators/shacl.html">SHACL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/owl.html">OWL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/yarrrml.html">YARRRML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generators/markdown.html">Markdown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/docgen.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/erdiagram.html">ER Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generators/yuml.html">YUML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/plantumlgen.html">PlantUML Diagram Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/project-generator.html">Project Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/python.html">Python</a></li>
@@ -271,6 +269,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../generators/rust.html">Rust</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sqltable.html">SQL DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sqlalchemy.html">SQL Alchemy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generators/sqlvalidation.html">SQL Validation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/linkml.html">LinkML Generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/prefixmap.html">Prefix Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sssom.html">SSSOM</a></li>
@@ -288,7 +287,7 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../howtos/index.html">How-to Guides</a><input aria-label="Toggle navigation of How-to Guides" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../howtos/linkml-project-cookiecutter.html">LinkML Project Cookiecutter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/linkml-project-copier.html">LinkML Project Copier Template</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/collaborative-development.html">How to run a collaborative data modeling project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/recognize-structural-forms.html">How to recognize and work with different structural forms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/yq-for-schemas.html">Using yq for querying and manipulating schemas</a></li>
@@ -306,10 +305,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples of use</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ecosystem.html">The LinkML Ecosystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../specifications/linkml-spec.html">LinkML specification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing/contributing.html">Contribution Guidelines</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../get-involved/index.html">Get Involved</a><input aria-label="Toggle navigation of Get Involved" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/Community-Meetings.html">Community Meetings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/workshops-and-presentations.html">Workshops and Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-involved/office-hours.html">Monthly LinkML Office Hours</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../faq/index.html">FAQ</a><input aria-label="Toggle navigation of FAQ" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -324,7 +323,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developers guide:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Schema Developers Guide:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../cli/index.html">CLI</a><input aria-label="Toggle navigation of CLI" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cli/linkml.html"><code class="docutils literal notranslate"><span class="pre">linkml</span></code></a></li>
@@ -334,8 +333,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../cli/entrypoints.html">Entrypoints</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../developers/index.html">Developers guide</a><input aria-label="Toggle navigation of Developers guide" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../developers/organization.html">GitHub Organization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../developers/index.html">Schema Developers Guide</a><input aria-label="Toggle navigation of Schema Developers Guide" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../developers/notebooks.html">Jupyter Notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/manipulating-schemas.html">Manipulating Schemas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/manage-releases.html">How to Manage Releases of your LinkML Schema</a></li>
@@ -346,8 +344,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../developers/using-sql-dbs.html">Using SQL Databases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/sqlstore.html">SQLStore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/tool-developer-guide.html">Tool Implementer Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../developers/contributing-code.html">Contributing Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../developers/deprecation.html">Deprecations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../code/index.html">Code</a><input aria-label="Toggle navigation of Code" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -355,6 +351,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../code/utils.html">Utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/validator.html">Validator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/deprecation.html">Deprecation Log</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintainers Guide:</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../maintainers/index.html">Maintainers Guide</a><input aria-label="Toggle navigation of Maintainers Guide" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/organization.html">GitHub Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/deprecation.html">Deprecations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/code-of-conduct.html">Code of Conduct</a></li>
 </ul>
 </li>
 </ul>
@@ -604,41 +610,6 @@ specify the full dotted name (e.g.
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-validate-legacy-mode">
-<span class="sig-name descname"><span class="pre">--legacy-mode</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-validate-legacy-mode" title="Link to this definition">¶</a></dt>
-<dd><p>Use legacy linkml-validate behavior.</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-validate-m">
-<span id="cmdoption-linkml-validate-module"></span><span class="sig-name descname"><span class="pre">-m</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--module</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;module&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-validate-m" title="Link to this definition">¶</a></dt>
-<dd><p>[DEPRECATED: only used in legacy mode] Path to python datamodel module</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-validate-f">
-<span id="cmdoption-linkml-validate-input-format"></span><span class="sig-name descname"><span class="pre">-f</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--input-format</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;input_format&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-validate-f" title="Link to this definition">¶</a></dt>
-<dd><p>[DEPRECATED: only used in legacy mode] Input format. Inferred from input suffix if not specified</p>
-<dl class="field-list simple">
-<dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>yml | yaml | json | rdf | ttl | json-ld | csv | tsv</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-validate-S">
-<span id="cmdoption-linkml-validate-index-slot"></span><span class="sig-name descname"><span class="pre">-S</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--index-slot</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;index_slot&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-validate-S" title="Link to this definition">¶</a></dt>
-<dd><p>[DEPRECATED: only used in legacy mode] top level slot. Required for CSV dumping/loading</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-validate-include-range-class-descendants">
-<span id="cmdoption-linkml-validate-no-range-class-descendants"></span><span class="sig-name descname"><span class="pre">--include-range-class-descendants</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-range-class-descendants</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-validate-include-range-class-descendants" title="Link to this definition">¶</a></dt>
-<dd><p>[DEPRECATED: only used in legacy mode] When handling range constraints, include all descendants of the range class instead of just the range class</p>
-</dd></dl>
-
-<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-linkml-validate-D">
 <span id="cmdoption-linkml-validate-include-context"></span><span id="cmdoption-linkml-validate-no-include-context"></span><span class="sig-name descname"><span class="pre">-D</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--include-context</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-include-context</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-validate-D" title="Link to this definition">¶</a></dt>
 <dd><p>Include additional context when reporting of validation errors.</p>
@@ -647,6 +618,12 @@ specify the full dotted name (e.g.
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-linkml-validate-allow-null-for-optional-enums">
+<span class="sig-name descname"><span class="pre">--allow-null-for-optional-enums</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-validate-allow-null-for-optional-enums" title="Link to this definition">¶</a></dt>
+<dd><p>Downgrade enum validation errors to warnings when the value is null/empty and the slot is not required. Prevents ‘None is not one of […]’ and “’’ is not one of […]” errors for optional enum slots.</p>
 </dd></dl>
 
 <dl class="std option">
@@ -698,83 +675,7 @@ $<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><sp
 <li><p>generation of SPARQL constraint-style queries (see [sparqlgen](../generators/sparql) )</p></li>
 <li><p>execution of those queries on an in-memory graph or external triplestore</p></li>
 </ol>
-<p>The user can choose to run only the first step, to obtain a bank of SPARQL queries that can be applied selectively</p>
-<section id="linkml-sparql-validate">
-<h3>linkml-sparql-validate<a class="headerlink" href="#linkml-sparql-validate" title="Link to this heading">¶</a></h3>
-<p>Validates sparql</p>
-<p>Example:</p>
-<blockquote>
-<div><p>linkml-sparql-validate -U <a class="reference external" href="http://sparql.hegroup.org/sparql">http://sparql.hegroup.org/sparql</a> -s tests/test_validation/input/omo.yaml</p>
-</div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>linkml-sparql-validate<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
-</pre></div>
-</div>
-<p class="rubric">Options</p>
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-sparql-validate-G">
-<span id="cmdoption-linkml-sparql-validate-named-graph"></span><span class="sig-name descname"><span class="pre">-G</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--named-graph</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;named_graph&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-sparql-validate-G" title="Link to this definition">¶</a></dt>
-<dd><p>Constrain query to a named graph</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-sparql-validate-i">
-<span id="cmdoption-linkml-sparql-validate-input"></span><span class="sig-name descname"><span class="pre">-i</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--input</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;input&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-sparql-validate-i" title="Link to this definition">¶</a></dt>
-<dd><p>Input file to validate</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-sparql-validate-U">
-<span id="cmdoption-linkml-sparql-validate-endpoint-url"></span><span class="sig-name descname"><span class="pre">-U</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--endpoint-url</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;endpoint_url&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-sparql-validate-U" title="Link to this definition">¶</a></dt>
-<dd><p>URL of sparql endpoint</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-sparql-validate-L">
-<span id="cmdoption-linkml-sparql-validate-limit"></span><span class="sig-name descname"><span class="pre">-L</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--limit</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;limit&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-sparql-validate-L" title="Link to this definition">¶</a></dt>
-<dd><p>Max results per query</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-sparql-validate-o">
-<span id="cmdoption-linkml-sparql-validate-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-sparql-validate-o" title="Link to this definition">¶</a></dt>
-<dd><p>Path to report file</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-sparql-validate-f">
-<span id="cmdoption-linkml-sparql-validate-input-format"></span><span class="sig-name descname"><span class="pre">-f</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--input-format</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;input_format&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-sparql-validate-f" title="Link to this definition">¶</a></dt>
-<dd><p>Input format. Inferred from input suffix if not specified</p>
-<dl class="field-list simple">
-<dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>yml | yaml | json | rdf | ttl | json-ld | csv | tsv</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-sparql-validate-t">
-<span id="cmdoption-linkml-sparql-validate-output-format"></span><span class="sig-name descname"><span class="pre">-t</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-format</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_format&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-sparql-validate-t" title="Link to this definition">¶</a></dt>
-<dd><p>Output format. Inferred from output suffix if not specified</p>
-<dl class="field-list simple">
-<dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>yml | yaml | json | rdf | ttl | json-ld | csv | tsv</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-sparql-validate-s">
-<span id="cmdoption-linkml-sparql-validate-schema"></span><span class="sig-name descname"><span class="pre">-s</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--schema</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;schema&gt;</span></span><a class="headerlink" href="#cmdoption-linkml-sparql-validate-s" title="Link to this definition">¶</a></dt>
-<dd><p>Path to schema specified as LinkML yaml</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-linkml-sparql-validate-V">
-<span id="cmdoption-linkml-sparql-validate-version"></span><span class="sig-name descname"><span class="pre">-V</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--version</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-linkml-sparql-validate-V" title="Link to this definition">¶</a></dt>
-<dd><p>Show the version and exit.</p>
-</dd></dl>
-
-</section>
+<p>The user can choose to run only the first step, to obtain a bank of SPARQL queries that can be applied selectively.</p>
 </section>
 <section id="validation-via-shape-languages">
 <h2>Validation via shape languages<a class="headerlink" href="#validation-via-shape-languages" title="Link to this heading">¶</a></h2>
@@ -866,10 +767,7 @@ $<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><sp
 </li>
 <li><a class="reference internal" href="#python-object-instantiation">Python object instantiation</a></li>
 <li><a class="reference internal" href="#json-schema-with-external-tools">JSON Schema with external tools</a></li>
-<li><a class="reference internal" href="#validation-of-rdf-triplestores-using-generated-sparql">Validation of RDF triplestores using generated SPARQL</a><ul>
-<li><a class="reference internal" href="#linkml-sparql-validate">linkml-sparql-validate</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#validation-of-rdf-triplestores-using-generated-sparql">Validation of RDF triplestores using generated SPARQL</a></li>
 <li><a class="reference internal" href="#validation-via-shape-languages">Validation via shape languages</a></li>
 <li><a class="reference internal" href="#future-plans">Future plans</a></li>
 </ul>

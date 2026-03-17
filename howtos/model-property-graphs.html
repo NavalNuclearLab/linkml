@@ -258,10 +258,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../generators/shacl.html">SHACL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/owl.html">OWL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/yarrrml.html">YARRRML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generators/markdown.html">Markdown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/docgen.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/erdiagram.html">ER Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generators/yuml.html">YUML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/plantumlgen.html">PlantUML Diagram Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/project-generator.html">Project Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/python.html">Python</a></li>
@@ -271,6 +269,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../generators/rust.html">Rust</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sqltable.html">SQL DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sqlalchemy.html">SQL Alchemy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generators/sqlvalidation.html">SQL Validation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/linkml.html">LinkML Generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/prefixmap.html">Prefix Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sssom.html">SSSOM</a></li>
@@ -288,7 +287,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">How-to Guides</a><input aria-label="Toggle navigation of How-to Guides" checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="linkml-project-cookiecutter.html">LinkML Project Cookiecutter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linkml-project-copier.html">LinkML Project Copier Template</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborative-development.html">How to run a collaborative data modeling project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="recognize-structural-forms.html">How to recognize and work with different structural forms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yq-for-schemas.html">Using yq for querying and manipulating schemas</a></li>
@@ -306,10 +305,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples of use</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ecosystem.html">The LinkML Ecosystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../specifications/linkml-spec.html">LinkML specification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing/contributing.html">Contribution Guidelines</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../get-involved/index.html">Get Involved</a><input aria-label="Toggle navigation of Get Involved" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/Community-Meetings.html">Community Meetings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/workshops-and-presentations.html">Workshops and Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-involved/office-hours.html">Monthly LinkML Office Hours</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../faq/index.html">FAQ</a><input aria-label="Toggle navigation of FAQ" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -324,7 +323,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developers guide:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Schema Developers Guide:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../cli/index.html">CLI</a><input aria-label="Toggle navigation of CLI" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cli/linkml.html"><code class="docutils literal notranslate"><span class="pre">linkml</span></code></a></li>
@@ -334,8 +333,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../cli/entrypoints.html">Entrypoints</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../developers/index.html">Developers guide</a><input aria-label="Toggle navigation of Developers guide" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../developers/organization.html">GitHub Organization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../developers/index.html">Schema Developers Guide</a><input aria-label="Toggle navigation of Schema Developers Guide" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../developers/notebooks.html">Jupyter Notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/manipulating-schemas.html">Manipulating Schemas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/manage-releases.html">How to Manage Releases of your LinkML Schema</a></li>
@@ -346,8 +344,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../developers/using-sql-dbs.html">Using SQL Databases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/sqlstore.html">SQLStore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/tool-developer-guide.html">Tool Implementer Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../developers/contributing-code.html">Contributing Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../developers/deprecation.html">Deprecations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../code/index.html">Code</a><input aria-label="Toggle navigation of Code" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -355,6 +351,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../code/utils.html">Utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/validator.html">Validator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/deprecation.html">Deprecation Log</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintainers Guide:</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../maintainers/index.html">Maintainers Guide</a><input aria-label="Toggle navigation of Maintainers Guide" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/organization.html">GitHub Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/deprecation.html">Deprecations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/code-of-conduct.html">Code of Conduct</a></li>
 </ul>
 </li>
 </ul>
@@ -397,7 +403,7 @@
         <article role="main" id="furo-main-content">
           <section id="how-to-make-a-property-graph-schema">
 <h1>How to make a property graph schema<a class="headerlink" href="#how-to-make-a-property-graph-schema" title="Link to this heading">¶</a></h1>
-<p>LinkML is intended to be a flexible, general purpose “<a class="reference external" href="https://github.com/json-ld/yaml-ld/issues/19">polyglot</a>” data modeling framework. You can use it with JSON documents and document databases like MongoDB, with tables and data frames, or with graph or RDF databases, and more. See <a class="reference internal" href="recognize-structural-forms.html"><span class="std std-doc">How to recognize and work with different structural forms</span></a> for more details.</p>
+<p>LinkML is intended to be a flexible, general purpose “<a class="reference external" href="https://github.com/w3c/yaml-ld/issues/19">polyglot</a>” data modeling framework. You can use it with JSON documents and document databases like MongoDB, with tables and data frames, or with graph or RDF databases, and more. See <a class="reference internal" href="recognize-structural-forms.html"><span class="std std-doc">How to recognize and work with different structural forms</span></a> for more details.</p>
 <p>A lot of the LinkML documentation uses JSON/YAML as examples, as these are flexible commonly used syntaxes for exchanging data, but many of the original use cases for LinkML came from <a class="reference external" href="https://biolink.github.io/biolink-model/">graph modeling</a>, and this continues to be a driving use case.</p>
 <p>This how-to guide walks through the steps for making a schema for a <a class="reference external" href="https://en.wikipedia.org/wiki/Property_graph">Property Graph</a> (PG), such as what might be found in a graph database like <a class="reference external" href="https://neo4j.com/">Neo4J</a>, or also in an RDF database that supports <a class="reference external" href="https://www.ontotext.com/knowledgehub/fundamentals/what-is-rdf-star/">RDF-star</a>, such as GraphDB.</p>
 <p>We focus here on PGs, because there are some specific design considerations that don’t come up when thinking about simple RDF-style subject-property-object graphs (see <a class="reference external" href="https://linkml.io/linkml/data/rdf.html">working with RDF</a> for more on this topic).</p>

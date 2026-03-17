@@ -3,11 +3,11 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="How to run a collaborative data modeling project" href="collaborative-development.html"><link rel="prev" title="How-to Guides" href="index.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Contribution Guidelines" href="contributing.html"><link rel="prev" title="Deprecation Log" href="../code/deprecation.html">
         <link rel="prefetch" href="https://linkml.io/uploads/linkml-logo_color.png" as="image">
 
     <link rel="shortcut icon" href="https://linkml.io/uploads/linkml-logo_color-no-words.png"><!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
-        <title>LinkML Project Cookiecutter - linkml documentation</title>
+        <title>Maintainers Guide - linkml documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
@@ -178,7 +178,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -200,7 +200,7 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">LinkML at a glance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Quick Install Guide</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../intro/tutorial.html">Tutorial</a><input aria-label="Toggle navigation of Tutorial" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -258,10 +258,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../generators/shacl.html">SHACL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/owl.html">OWL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/yarrrml.html">YARRRML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generators/markdown.html">Markdown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/docgen.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/erdiagram.html">ER Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generators/yuml.html">YUML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/plantumlgen.html">PlantUML Diagram Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/project-generator.html">Project Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/python.html">Python</a></li>
@@ -271,6 +269,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../generators/rust.html">Rust</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sqltable.html">SQL DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sqlalchemy.html">SQL Alchemy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generators/sqlvalidation.html">SQL Validation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/linkml.html">LinkML Generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/prefixmap.html">Prefix Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sssom.html">SSSOM</a></li>
@@ -287,29 +286,29 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">How-to Guides</a><input aria-label="Toggle navigation of How-to Guides" checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">LinkML Project Cookiecutter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="collaborative-development.html">How to run a collaborative data modeling project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recognize-structural-forms.html">How to recognize and work with different structural forms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="yq-for-schemas.html">Using yq for querying and manipulating schemas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using-jsonld.html">Using JSON-LD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-measurements.html">How to model quantities and measurements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="port-linkml.html">Porting LinkML tools to other programming languages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="multidimensional-arrays.html">Multidimensional Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-property-graphs.html">How to make a property graph schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generate-ai-prompts.html">How to Generate AI prompts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deprecating-elements.html">Deprecating elements while maintaining PURLs and other URIs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ontologies-as-values.html">Using ontology terms as values in data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="skip-logic.html">How to implement skip logic in LinkML</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../howtos/index.html">How-to Guides</a><input aria-label="Toggle navigation of How-to Guides" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/linkml-project-copier.html">LinkML Project Copier Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/collaborative-development.html">How to run a collaborative data modeling project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/recognize-structural-forms.html">How to recognize and work with different structural forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/yq-for-schemas.html">Using yq for querying and manipulating schemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/using-jsonld.html">Using JSON-LD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/model-measurements.html">How to model quantities and measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/port-linkml.html">Porting LinkML tools to other programming languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/multidimensional-arrays.html">Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/model-property-graphs.html">How to make a property graph schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/generate-ai-prompts.html">How to Generate AI prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/deprecating-elements.html">Deprecating elements while maintaining PURLs and other URIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/ontologies-as-values.html">Using ontology terms as values in data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/skip-logic.html">How to implement skip logic in LinkML</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples of use</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ecosystem.html">The LinkML Ecosystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../specifications/linkml-spec.html">LinkML specification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing/contributing.html">Contribution Guidelines</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../get-involved/index.html">Get Involved</a><input aria-label="Toggle navigation of Get Involved" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/Community-Meetings.html">Community Meetings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/workshops-and-presentations.html">Workshops and Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-involved/office-hours.html">Monthly LinkML Office Hours</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../faq/index.html">FAQ</a><input aria-label="Toggle navigation of FAQ" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -324,7 +323,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developers guide:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Schema Developers Guide:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../cli/index.html">CLI</a><input aria-label="Toggle navigation of CLI" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cli/linkml.html"><code class="docutils literal notranslate"><span class="pre">linkml</span></code></a></li>
@@ -334,8 +333,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../cli/entrypoints.html">Entrypoints</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../developers/index.html">Developers guide</a><input aria-label="Toggle navigation of Developers guide" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../developers/organization.html">GitHub Organization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../developers/index.html">Schema Developers Guide</a><input aria-label="Toggle navigation of Schema Developers Guide" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../developers/notebooks.html">Jupyter Notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/manipulating-schemas.html">Manipulating Schemas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/manage-releases.html">How to Manage Releases of your LinkML Schema</a></li>
@@ -346,8 +344,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../developers/using-sql-dbs.html">Using SQL Databases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/sqlstore.html">SQLStore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/tool-developer-guide.html">Tool Implementer Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../developers/contributing-code.html">Contributing Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../developers/deprecation.html">Deprecations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../code/index.html">Code</a><input aria-label="Toggle navigation of Code" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -355,6 +351,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../code/utils.html">Utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/validator.html">Validator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/deprecation.html">Deprecation Log</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintainers Guide:</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Maintainers Guide</a><input aria-label="Toggle navigation of Maintainers Guide" checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="organization.html">GitHub Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deprecation.html">Deprecations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code-of-conduct.html">Code of Conduct</a></li>
 </ul>
 </li>
 </ul>
@@ -377,7 +383,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/howtos/linkml-project-cookiecutter.md.txt" title="View this page">
+  <a class="muted-link" href="../_sources/maintainers/index.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -390,40 +396,55 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="linkml-project-cookiecutter">
-<h1>LinkML Project Cookiecutter<a class="headerlink" href="#linkml-project-cookiecutter" title="Link to this heading">¶</a></h1>
-<p>To start a new LinkML project, please use the <a class="reference external" href="https://github.com/linkml/linkml-project-cookiecutter">LinkML Project Cookiecutter</a>
-command line tool.  This tool will generate a LinkML project directory for you, including the directory structure
-and commands necessary to build and test your project.  For  step-by-step instructions on using the linkml-project-cookiecutter, please
-<a class="reference external" href="https://github.com/linkml/linkml-project-cookiecutter/blob/main/README.md">consult the documentation here</a>.</p>
-<section id="linkml-project-cookiecutter-quickstart">
-<h2>LinkML Project Cookiecutter Quickstart<a class="headerlink" href="#linkml-project-cookiecutter-quickstart" title="Link to this heading">¶</a></h2>
-<p>In your uv virtual environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>add<span class="w"> </span>cruft
-</pre></div>
+          <section id="maintainers-guide">
+<span id="maintainers"></span><h1>Maintainers Guide<a class="headerlink" href="#maintainers-guide" title="Link to this heading">¶</a></h1>
+<p>This section is for contributors to the LinkML framework itself and maintainers of the core repositories.</p>
+<p>If you are looking for documentation on how to use LinkML to build schemas, see the <a class="reference internal" href="../developers/index.html#developers"><span class="std std-ref">Schema Developers Guide</span></a> guide.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribution Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#development-environment-setup">Development Environment Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#linkml-testing-framework">LinkML Testing Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#code-formatting-and-linting">Code formatting and linting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#release-to-pypi">Release to PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#github-best-practices">GitHub Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="organization.html">GitHub Organization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="organization.html#core-packages">Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="organization.html#the-metamodel">The metamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="organization.html#productivity-utilities">Productivity utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="organization.html#working-with-different-backends">Working with different backends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="organization.html#additional-packages">Additional packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="organization.html#linkml-for-other-languages">LinkML for other languages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deprecation.html">Deprecations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deprecation.html#guidelines">Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deprecation.html#process">Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deprecation.html#module-linkml.utils.deprecation">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deprecation.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code-of-conduct.html">Code of Conduct</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code-of-conduct.html#our-pledge">Our Pledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code-of-conduct.html#our-standards">Our Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code-of-conduct.html#our-responsibilities">Our Responsibilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code-of-conduct.html#scope">Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code-of-conduct.html#enforcement">Enforcement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code-of-conduct.html#attribution">Attribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code-of-conduct.html#related-policies">Related Policies</a></li>
+</ul>
+</li>
+</ul>
 </div>
-</section>
-<section id="use-cruft-to-create-your-brand-new-linkml-project">
-<h2>Use cruft to create your brand new LinkML project:<a class="headerlink" href="#use-cruft-to-create-your-brand-new-linkml-project" title="Link to this heading">¶</a></h2>
-<p>In your uv virtual environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>run<span class="w"> </span>cruft<span class="w"> </span>create<span class="w"> </span>https://github.com/linkml/linkml-project-cookiecutter
-</pre></div>
-</div>
-<p>Answer the prompted questions to customize your project.  More details on the prompts and how to answer
-them can be found <a class="reference external" href="https://github.com/linkml/linkml-project-cookiecutter/blob/main/README.md">here</a>.</p>
-</section>
-<section id="build-your-linkml-project">
-<h2>Build your LinkML project<a class="headerlink" href="#build-your-linkml-project" title="Link to this heading">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>linkml-projects/my-awesome-schema<span class="w">  </span><span class="c1"># using the folder example above</span>
-make<span class="w"> </span>setup
-</pre></div>
-</div>
-</section>
 </section>
 
         </article>
@@ -431,23 +452,23 @@ make<span class="w"> </span>setup
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="collaborative-development.html">
+          <a class="next-page" href="contributing.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">How to run a collaborative data modeling project</div>
+                <div class="title">Contribution Guidelines</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index.html">
+          <a class="prev-page" href="../code/deprecation.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">How-to Guides</div>
+                <div class="title">Deprecation Log</div>
                 
               </div>
             </a>
@@ -469,29 +490,8 @@ make<span class="w"> </span>setup
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">LinkML Project Cookiecutter</a><ul>
-<li><a class="reference internal" href="#linkml-project-cookiecutter-quickstart">LinkML Project Cookiecutter Quickstart</a></li>
-<li><a class="reference internal" href="#use-cruft-to-create-your-brand-new-linkml-project">Use cruft to create your brand new LinkML project:</a></li>
-<li><a class="reference internal" href="#build-your-linkml-project">Build your LinkML project</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

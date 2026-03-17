@@ -258,10 +258,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../generators/shacl.html">SHACL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/owl.html">OWL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/yarrrml.html">YARRRML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generators/markdown.html">Markdown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/docgen.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/erdiagram.html">ER Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generators/yuml.html">YUML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/plantumlgen.html">PlantUML Diagram Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/project-generator.html">Project Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/python.html">Python</a></li>
@@ -271,6 +269,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../generators/rust.html">Rust</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sqltable.html">SQL DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sqlalchemy.html">SQL Alchemy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generators/sqlvalidation.html">SQL Validation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/linkml.html">LinkML Generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/prefixmap.html">Prefix Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generators/sssom.html">SSSOM</a></li>
@@ -288,7 +287,7 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../howtos/index.html">How-to Guides</a><input aria-label="Toggle navigation of How-to Guides" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../howtos/linkml-project-cookiecutter.html">LinkML Project Cookiecutter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos/linkml-project-copier.html">LinkML Project Copier Template</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/collaborative-development.html">How to run a collaborative data modeling project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/recognize-structural-forms.html">How to recognize and work with different structural forms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../howtos/yq-for-schemas.html">Using yq for querying and manipulating schemas</a></li>
@@ -306,10 +305,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples of use</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ecosystem.html">The LinkML Ecosystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../specifications/linkml-spec.html">LinkML specification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing/contributing.html">Contribution Guidelines</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../get-involved/index.html">Get Involved</a><input aria-label="Toggle navigation of Get Involved" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/Community-Meetings.html">Community Meetings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-involved/workshops-and-presentations.html">Workshops and Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-involved/office-hours.html">Monthly LinkML Office Hours</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../faq/index.html">FAQ</a><input aria-label="Toggle navigation of FAQ" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -324,7 +323,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developers guide:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Schema Developers Guide:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../cli/index.html">CLI</a><input aria-label="Toggle navigation of CLI" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cli/linkml.html"><code class="docutils literal notranslate"><span class="pre">linkml</span></code></a></li>
@@ -334,8 +333,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../cli/entrypoints.html">Entrypoints</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../developers/index.html">Developers guide</a><input aria-label="Toggle navigation of Developers guide" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../developers/organization.html">GitHub Organization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../developers/index.html">Schema Developers Guide</a><input aria-label="Toggle navigation of Schema Developers Guide" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../developers/notebooks.html">Jupyter Notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/manipulating-schemas.html">Manipulating Schemas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/manage-releases.html">How to Manage Releases of your LinkML Schema</a></li>
@@ -346,8 +344,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../developers/using-sql-dbs.html">Using SQL Databases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/sqlstore.html">SQLStore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/tool-developer-guide.html">Tool Implementer Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../developers/contributing-code.html">Contributing Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../developers/deprecation.html">Deprecations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../code/index.html">Code</a><input aria-label="Toggle navigation of Code" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -355,6 +351,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../code/utils.html">Utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/validator.html">Validator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/deprecation.html">Deprecation Log</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintainers Guide:</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../maintainers/index.html">Maintainers Guide</a><input aria-label="Toggle navigation of Maintainers Guide" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/organization.html">GitHub Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/deprecation.html">Deprecations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintainers/code-of-conduct.html">Code of Conduct</a></li>
 </ul>
 </li>
 </ul>
@@ -463,11 +469,7 @@ for reuse.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gen-json-schema<span class="w"> </span>personinfo.yaml
 </pre></div>
 </div>
-<p>And just as a reminder, we can look at the UML for the schema:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gen-yuml<span class="w"> </span>personinfo.yaml
-</pre></div>
-</div>
-<p><img alt="img" src="https://yuml.me/diagram/nofunky;dir:TB/class/%5BContainer%5D++-%20persons%200..*%3E%5BPerson%7Cid:string;full_name:string;aliases:string%20*;phone:string%20%3F;age:integer%20%3F%5D,%5BContainer%5D" /></p>
+<p>You can visualize the schema using <code class="docutils literal notranslate"><span class="pre">gen-erdiagram</span></code> or <code class="docutils literal notranslate"><span class="pre">gen-doc</span></code>.</p>
 <p>See <a class="reference internal" href="../faq/modeling.html#when-should-i-use-attributes-vs-slots"><span class="std std-ref">FAQ: attributes vs slots</span></a></p>
 </section>
 <section id="inheritance">
@@ -572,12 +574,7 @@ example, having a unique identifier and a name</p>
 </pre></div>
 </div>
 <p>Note that our container object now contains two kinds of lists: people and organization</p>
-<p>Here is the schema:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gen-yuml<span class="w"> </span>personinfo-with-inheritance.yaml
-</pre></div>
-</div>
-<p>Renders as:</p>
-<p><img alt="img" src="https://yuml.me/diagram/nofunky;dir:TB/class/%5BNamedThing%7Cid:string;full_name:string%5D%5E-%5BPerson%7Cphone:string%20%3F;age:integer%20%3F;aliases:string%20*;id(i):string;full_name(i):string%5D,%5BNamedThing%5D%5E-%5BOrganization%7Cmission_statement:string%20%3F;aliases:string%20*;id(i):string;full_name(i):string%5D,%5BContainer%5D++-%20persons%200..*%3E%5BPerson%5D,%5BPerson%5Duses%20-.-%3E%5BHasAliases%7Caliases:string%20*%5D,%5BContainer%5D++-%20organizations%200..*%3E%5BOrganization%5D,%5BOrganization%5Duses%20-.-%3E%5BHasAliases%5D,%5BPerson%5Duses%20-.-%3E%5BHasAliases%5D,%5BOrganization%5Duses%20-.-%3E%5BHasAliases%5D,%5BContainer%5D" /></p>
+<p>You can visualize this schema using <code class="docutils literal notranslate"><span class="pre">gen-erdiagram</span> <span class="pre">personinfo-with-inheritance.yaml</span></code>.</p>
 <p>Let’s take a look at the JSON schema:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gen-json-schema<span class="w"> </span>personinfo-with-inheritance.yaml<span class="w"> </span>&gt;<span class="w"> </span>personinfo-with-inheritance.schema.json
 </pre></div>
@@ -713,10 +710,7 @@ example, having a unique identifier and a name</p>
 <span class="w">      </span><span class="nt">MEMBER_OF</span><span class="p">:</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gen-yuml<span class="w"> </span>slot-usage-example.yaml
-</pre></div>
-</div>
-<p><img alt="img" src="https://yuml.me/diagram/nofunky;dir:TB/class/%5BNamedThing%7Cid:string;full_name:string%20%3F%5D%3Crelated_to%200..1-%20%5BRelationship%7Cduration:integer%20%3F;relationship_type:string%20%3F%5D,%5BRelationship%5D%5E-%5BOrganizationalRelationship%7Crelationship_type:OrganizationalRelationshipType%20%3F;duration(i):integer%20%3F%5D,%5BRelationship%5D%5E-%5BFamilialRelationship%7Crelationship_type:FamilialRelationshipType%20%3F;duration(i):integer%20%3F%5D,%5BOrganization%7Cid(i):string;full_name(i):string%20%3F%5D%3Crelated_to%201..1-%20%5BOrganizationalRelationship%5D,%5BPerson%7Cid(i):string;full_name(i):string%20%3F%5D++-%20has_organizational_relationships%200..*%3E%5BOrganizationalRelationship%5D,%5BFamilialRelationship%5D%3Chas_familial_relationships%200..*-++%5BPerson%5D,%5BFamilialRelationship%5D-%20related_to%201..1%3E%5BPerson%5D,%5BContainer%5D++-%20persons%200..*%3E%5BPerson%5D,%5BNamedThing%5D%5E-%5BPerson%5D,%5BOrganizationalRelationship%5D-%20related_to%201..1%3E%5BOrganization%5D,%5BContainer%5D++-%20organizations%200..*%3E%5BOrganization%5D,%5BNamedThing%5D%5E-%5BOrganization%5D,%5BRelationship%5D-%20related_to%200..1%3E%5BNamedThing%5D,%5BNamedThing%5D%5E-%5BPerson%5D,%5BNamedThing%5D%5E-%5BOrganization%5D,%5BPerson%5D++-%20has_familial_relationships%200..*%3E%5BFamilialRelationship%5D,%5BContainer%5D" /></p>
+<p>You can visualize this schema using <code class="docutils literal notranslate"><span class="pre">gen-erdiagram</span> <span class="pre">slot-usage-example.yaml</span></code>.</p>
 <p>Here we have a fairly generic class <code class="docutils literal notranslate"><span class="pre">Relationship</span></code> that holds a relationship a person can hold to another entity such as another person or an organization.</p>
 <p>there are two subclasses, or for personal relationships (e.g. siblings) and other for person-to-organization relationships. these use the same generic slots (duration, relationship)type, and related_to). However, the latter two are constrained in a class-specific way.</p>
 <p>data.yaml:</p>

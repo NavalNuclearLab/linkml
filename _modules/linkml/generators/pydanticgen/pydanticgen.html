@@ -257,10 +257,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/shacl.html">SHACL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/owl.html">OWL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/yarrrml.html">YARRRML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../generators/markdown.html">Markdown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/docgen.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/erdiagram.html">ER Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../generators/yuml.html">YUML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/plantumlgen.html">PlantUML Diagram Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/project-generator.html">Project Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/python.html">Python</a></li>
@@ -270,6 +268,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/rust.html">Rust</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/sqltable.html">SQL DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/sqlalchemy.html">SQL Alchemy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../generators/sqlvalidation.html">SQL Validation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/linkml.html">LinkML Generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/prefixmap.html">Prefix Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../generators/sssom.html">SSSOM</a></li>
@@ -287,7 +286,7 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../../howtos/index.html">How-to Guides</a><input aria-label="Toggle navigation of How-to Guides" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../howtos/linkml-project-cookiecutter.html">LinkML Project Cookiecutter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../howtos/linkml-project-copier.html">LinkML Project Copier Template</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../howtos/collaborative-development.html">How to run a collaborative data modeling project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../howtos/recognize-structural-forms.html">How to recognize and work with different structural forms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../howtos/yq-for-schemas.html">Using yq for querying and manipulating schemas</a></li>
@@ -305,10 +304,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../examples.html">Examples of use</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ecosystem.html">The LinkML Ecosystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../specifications/linkml-spec.html">LinkML specification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../contributing/contributing.html">Contribution Guidelines</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../../get-involved/index.html">Get Involved</a><input aria-label="Toggle navigation of Get Involved" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../get-involved/Community-Meetings.html">Community Meetings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../get-involved/workshops-and-presentations.html">Workshops and Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../get-involved/office-hours.html">Monthly LinkML Office Hours</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../../faq/index.html">FAQ</a><input aria-label="Toggle navigation of FAQ" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -323,7 +322,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developers guide:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Schema Developers Guide:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../../cli/index.html">CLI</a><input aria-label="Toggle navigation of CLI" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../cli/linkml.html"><code class="docutils literal notranslate"><span class="pre">linkml</span></code></a></li>
@@ -333,8 +332,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../cli/entrypoints.html">Entrypoints</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../developers/index.html">Developers guide</a><input aria-label="Toggle navigation of Developers guide" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../developers/organization.html">GitHub Organization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../developers/index.html">Schema Developers Guide</a><input aria-label="Toggle navigation of Schema Developers Guide" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../developers/notebooks.html">Jupyter Notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../developers/manipulating-schemas.html">Manipulating Schemas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../developers/manage-releases.html">How to Manage Releases of your LinkML Schema</a></li>
@@ -345,8 +343,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../developers/using-sql-dbs.html">Using SQL Databases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../developers/sqlstore.html">SQLStore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../developers/tool-developer-guide.html">Tool Implementer Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../developers/contributing-code.html">Contributing Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../developers/deprecation.html">Deprecations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../../code/index.html">Code</a><input aria-label="Toggle navigation of Code" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -354,6 +350,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../code/utils.html">Utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../code/validator.html">Validator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../code/deprecation.html">Deprecation Log</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintainers Guide:</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../maintainers/index.html">Maintainers Guide</a><input aria-label="Toggle navigation of Maintainers Guide" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../maintainers/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../maintainers/organization.html">GitHub Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../maintainers/deprecation.html">Deprecations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../maintainers/code-of-conduct.html">Code of Conduct</a></li>
 </ul>
 </li>
 </ul>
@@ -400,13 +406,14 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">types</span><span class="w"> </span><span class="kn">import</span> <span class="n">ModuleType</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">ClassVar</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">overload</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">ClassVar</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">overload</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">click</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">jinja2</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChoiceLoader</span><span class="p">,</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span><span class="p">,</span> <span class="n">Template</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">linkml._version</span><span class="w"> </span><span class="kn">import</span> <span class="n">__version__</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">linkml.generators.common.lifecycle</span><span class="w"> </span><span class="kn">import</span> <span class="n">LifecycleMixin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">linkml.generators.common.subproperty</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_subproperty_values</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">linkml.generators.common.type_designators</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_accepted_type_designator_values</span><span class="p">,</span> <span class="n">get_type_designator_value</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">linkml.generators.oocodegen</span><span class="w"> </span><span class="kn">import</span> <span class="n">OOCodeGenerator</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">linkml.generators.pydanticgen</span><span class="w"> </span><span class="kn">import</span> <span class="n">includes</span>
@@ -528,8 +535,8 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
 
-<span class="n">DefinitionType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;DefinitionType&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Union</span><span class="p">[</span><span class="n">SchemaDefinition</span><span class="p">,</span> <span class="n">ClassDefinition</span><span class="p">,</span> <span class="n">SlotDefinition</span><span class="p">])</span>
-<span class="n">TemplateType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;TemplateType&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Union</span><span class="p">[</span><span class="n">PydanticModule</span><span class="p">,</span> <span class="n">PydanticClass</span><span class="p">,</span> <span class="n">PydanticAttribute</span><span class="p">])</span>
+<span class="n">DefinitionType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;DefinitionType&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">SchemaDefinition</span> <span class="o">|</span> <span class="n">ClassDefinition</span> <span class="o">|</span> <span class="n">SlotDefinition</span><span class="p">)</span>
+<span class="n">TemplateType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;TemplateType&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">PydanticModule</span> <span class="o">|</span> <span class="n">PydanticClass</span> <span class="o">|</span> <span class="n">PydanticAttribute</span><span class="p">)</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">make_valid_python_identifier</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -617,7 +624,7 @@
 <span class="sd">    If True, optional multivalued slots default to ``[]``; if False, they default to ``None``.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">template_dir</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">template_dir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Override templates for each PydanticTemplateModel.</span>
 
@@ -627,7 +634,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">extra_fields</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;allow&quot;</span><span class="p">,</span> <span class="s2">&quot;forbid&quot;</span><span class="p">,</span> <span class="s2">&quot;ignore&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;forbid&quot;</span>
     <span class="n">gen_mixin_inheritance</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="n">injected_classes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">injected_classes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">type</span> <span class="o">|</span> <span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A list/tuple of classes to inject into the generated module.</span>
 
@@ -636,7 +643,7 @@
 <span class="sd">    source file (ie. the module they are contained in needs a ``__file__`` attr,</span>
 <span class="sd">    see: :func:`inspect.getsource` )</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">injected_fields</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">injected_fields</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A list/tuple of field strings to inject into the base class.</span>
 
@@ -649,7 +656,7 @@
 <span class="sd">        )</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">imports</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">Import</span><span class="p">],</span> <span class="n">Imports</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">imports</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Import</span><span class="p">]</span> <span class="o">|</span> <span class="n">Imports</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Additional imports to inject into generated module.</span>
 
@@ -705,7 +712,7 @@
 <span class="sd">    Default ``True``, but optional in case import order must be explicitly given,</span>
 <span class="sd">    eg. to avoid circular import errors in complex generator subclasses.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">metadata_mode</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">MetadataMode</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">MetadataMode</span><span class="o">.</span><span class="n">AUTO</span>
+    <span class="n">metadata_mode</span><span class="p">:</span> <span class="n">MetadataMode</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">MetadataMode</span><span class="o">.</span><span class="n">AUTO</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    How to include schema metadata in generated pydantic models.</span>
 
@@ -755,7 +762,7 @@
 <span class="sd">        ``from ...example_schema.v1_2_3 import ClassA, ...``</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">split_context</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">split_context</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Additional variables to pass into ``split_pattern`` when</span>
 <span class="sd">    generating imported module names.</span>
@@ -770,6 +777,15 @@
 <span class="sd">    See :class:`.SplitMode` for description of options</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
+    <span class="n">expand_subproperty_of</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    If True, expand subproperty_of constraints to Literal type constraints.</span>
+
+<span class="sd">    When a slot has `subproperty_of` set, valid values are the referenced slot</span>
+<span class="sd">    and all its descendants (via is_a). Values are formatted according to the</span>
+<span class="sd">    slot&#39;s range type (string, uriorcurie, uri).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="c1"># ObjectVars (identical to pythongen)</span>
     <span class="n">gen_classvars</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">gen_slots</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
@@ -781,8 +797,8 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Substitute CamelCase and non-word characters with _&quot;&quot;&quot;</span>
 
     <span class="c1"># Private attributes</span>
-    <span class="n">_predefined_slot_values</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">_class_bases</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">_predefined_slot_values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">_class_bases</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">__post_init__</span><span class="p">()</span>
@@ -803,7 +819,7 @@
             <span class="k">raise</span> <span class="n">e</span></div>
 
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">_get_classes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sv</span><span class="p">:</span> <span class="n">SchemaView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">ClassDefinition</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">ClassDefinition</span><span class="p">]]]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_classes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sv</span><span class="p">:</span> <span class="n">SchemaView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">ClassDefinition</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">ClassDefinition</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]:</span>
         <span class="n">all_classes</span> <span class="o">=</span> <span class="n">sv</span><span class="o">.</span><span class="n">all_classes</span><span class="p">(</span><span class="n">imports</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">split</span><span class="p">:</span>
@@ -817,7 +833,7 @@
 <a class="viewcode-back" href="../../../../generators/pydantic.html#linkml.generators.pydanticgen.PydanticGenerator.sort_classes">[docs]</a>
     <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">sort_classes</span><span class="p">(</span>
-        <span class="n">clist</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ClassDefinition</span><span class="p">],</span> <span class="n">imported</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">ClassDefinition</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">clist</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ClassDefinition</span><span class="p">],</span> <span class="n">imported</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ClassDefinition</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">ClassDefinition</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        sort classes such that if C is a child of P then C appears after P in the list</span>
@@ -1167,6 +1183,13 @@
             <span class="n">pyrange</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Literal[&quot;</span><span class="si">{</span><span class="n">slot_def</span><span class="o">.</span><span class="n">equals_string</span><span class="si">}</span><span class="s1">&quot;]&#39;</span>
         <span class="k">elif</span> <span class="n">slot_def</span><span class="o">.</span><span class="n">equals_string_in</span><span class="p">:</span>
             <span class="n">pyrange</span> <span class="o">=</span> <span class="s2">&quot;Literal[&quot;</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;&quot;</span><span class="si">{</span><span class="n">a_string</span><span class="si">}</span><span class="s1">&quot;&#39;</span> <span class="k">for</span> <span class="n">a_string</span> <span class="ow">in</span> <span class="n">slot_def</span><span class="o">.</span><span class="n">equals_string_in</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span>
+        <span class="k">elif</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">expand_subproperty_of</span>
+            <span class="ow">and</span> <span class="n">slot_def</span><span class="o">.</span><span class="n">subproperty_of</span>
+            <span class="ow">and</span> <span class="n">slot_range</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sv</span><span class="o">.</span><span class="n">all_classes</span><span class="p">()</span>
+            <span class="ow">and</span> <span class="n">slot_range</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sv</span><span class="o">.</span><span class="n">all_enums</span><span class="p">()</span>
+        <span class="p">):</span>
+            <span class="n">pyrange</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_subproperty_constraint</span><span class="p">(</span><span class="n">slot_def</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">slot_range</span> <span class="ow">in</span> <span class="n">sv</span><span class="o">.</span><span class="n">all_classes</span><span class="p">():</span>
             <span class="n">pyrange</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_class_slot_range</span><span class="p">(</span>
                 <span class="n">slot_range</span><span class="p">,</span>
@@ -1195,7 +1218,7 @@
         <span class="n">slot_ranges</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
         <span class="n">slot_def</span><span class="p">:</span> <span class="n">SlotDefinition</span><span class="p">,</span>
         <span class="n">class_def</span><span class="p">:</span> <span class="n">ClassDefinition</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Find the python range value (str, int, etc) for the identifier slot</span>
 <span class="sd">        of a class used as a slot range.</span>
@@ -1226,7 +1249,20 @@
         <span class="k">return</span> <span class="kc">None</span></div>
 
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">_clean_injected_classes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">injected_classes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_generate_subproperty_constraint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slot_def</span><span class="p">:</span> <span class="n">SlotDefinition</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate Literal type from slot descendants based on subproperty_of.</span>
+
+<span class="sd">        Following metamodel semantics: &quot;any ontological child (related to X via</span>
+<span class="sd">        an is_a relationship), is a valid value for the slot&quot;</span>
+
+<span class="sd">        :param slot_def: SlotDefinition with subproperty_of set</span>
+<span class="sd">        :return: Literal type string e.g. &#39;Literal[&quot;related_to&quot;, &quot;causes&quot;, ...]&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">get_subproperty_values</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">schemaview</span><span class="p">,</span> <span class="n">slot_def</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;Literal[&quot;</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&quot;&#39;</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_clean_injected_classes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">injected_classes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="nb">type</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get source, deduplicate, and dedent injected classes&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">injected_classes</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
@@ -1237,7 +1273,7 @@
         <span class="n">injected_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">textwrap</span><span class="o">.</span><span class="n">dedent</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">injected_classes</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">injected_classes</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">_inline_as_simple_dict_with_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slot_def</span><span class="p">:</span> <span class="n">SlotDefinition</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_inline_as_simple_dict_with_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slot_def</span><span class="p">:</span> <span class="n">SlotDefinition</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Determine if a slot should be inlined as a simple dict with a value.</span>
 
@@ -1343,7 +1379,7 @@
                     <span class="p">[</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">PydanticTemplateModel</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">model_attr</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
                 <span class="p">):</span>
                     <span class="n">meta</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
-                <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model_attr</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">PydanticTemplateModel</span><span class="p">)):</span>
+                <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model_attr</span><span class="p">,</span> <span class="nb">list</span> <span class="o">|</span> <span class="nb">dict</span> <span class="o">|</span> <span class="n">PydanticTemplateModel</span><span class="p">):</span>
                     <span class="n">meta</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
 
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata_mode</span> <span class="ow">in</span> <span class="p">(</span><span class="n">MetadataMode</span><span class="o">.</span><span class="n">FULL</span><span class="p">,</span> <span class="n">MetadataMode</span><span class="o">.</span><span class="n">FULL</span><span class="o">.</span><span class="n">value</span><span class="p">):</span>
@@ -1357,7 +1393,7 @@
         <span class="k">return</span> <span class="n">model</span></div>
 
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">_get_imports</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ClassDefinition</span><span class="p">,</span> <span class="n">SlotDefinition</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Imports</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_imports</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">:</span> <span class="n">ClassDefinition</span> <span class="o">|</span> <span class="n">SlotDefinition</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Imports</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get imports that are implied by their usage in slots or classes</span>
 <span class="sd">        (and thus need to be imported when generating schemas in :attr:`.split` == ``True`` mode).</span>
@@ -1423,7 +1459,7 @@
 
 <div class="viewcode-block" id="PydanticGenerator.generate_module_import">
 <a class="viewcode-back" href="../../../../generators/pydantic.html#linkml.generators.pydanticgen.PydanticGenerator.generate_module_import">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">generate_module_import</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="n">SchemaDefinition</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_module_import</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="n">SchemaDefinition</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Generate the module string for importing from python modules generated from imported schemas</span>
 <span class="sd">        when in :attr:`.split` mode.</span>
@@ -1527,7 +1563,7 @@
 
 <div class="viewcode-block" id="PydanticGenerator.serialize">
 <a class="viewcode-back" href="../../../../generators/pydantic.html#linkml.generators.pydanticgen.PydanticGenerator.serialize">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">serialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rendered_module</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PydanticModule</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">serialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rendered_module</span><span class="p">:</span> <span class="n">PydanticModule</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Serialize the schema to a pydantic module as a string</span>
 
@@ -1553,10 +1589,10 @@
     <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">generate_split</span><span class="p">(</span>
         <span class="bp">cls</span><span class="p">,</span>
-        <span class="n">schema</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">SchemaDefinition</span><span class="p">],</span>
-        <span class="n">output_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">),</span>
-        <span class="n">split_pattern</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">split_context</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span> <span class="o">|</span> <span class="n">SchemaDefinition</span><span class="p">,</span>
+        <span class="n">output_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">),</span>
+        <span class="n">split_pattern</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">split_context</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">split_mode</span><span class="p">:</span> <span class="n">SplitMode</span> <span class="o">=</span> <span class="n">SplitMode</span><span class="o">.</span><span class="n">AUTO</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">SplitResult</span><span class="p">]:</span>
@@ -1748,7 +1784,7 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">cli</span><span class="p">(</span>
     <span class="n">yamlfile</span><span class="p">,</span>
     <span class="n">template_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">template_dir</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">template_dir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">genmeta</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">classvars</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
