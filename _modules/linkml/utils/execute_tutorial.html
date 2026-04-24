@@ -269,6 +269,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqltable.html">SQL DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqlalchemy.html">SQL Alchemy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqlvalidation.html">SQL Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generators/typedb.html">TypeDB / TypeQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/linkml.html">LinkML Generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/prefixmap.html">Prefix Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sssom.html">SSSOM</a></li>
@@ -277,6 +278,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/csv.html">CSV</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/yaml.html">Yaml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/pandera.html">Pandera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generators/dashboard.html">Generator Feature Dashboard</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../generators/common/index.html">Common</a><input aria-label="Toggle navigation of Common" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../generators/common/build.html">Build</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../generators/common/lifecycle.html">Lifecycle</a></li>
@@ -298,6 +300,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../howtos/generate-ai-prompts.html">How to Generate AI prompts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../howtos/deprecating-elements.html">Deprecating elements while maintaining PURLs and other URIs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../howtos/ontologies-as-values.html">Using ontology terms as values in data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../howtos/implements-instantiates-guide.html">Implements vs Instantiates vs Inheritance: A Best Practices Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../howtos/skip-logic.html">How to implement skip logic in LinkML</a></li>
 </ul>
 </li>
@@ -360,6 +363,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../maintainers/organization.html">GitHub Organization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../maintainers/deprecation.html">Deprecations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../maintainers/code-of-conduct.html">Code of Conduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../maintainers/generator-governance.html">Generator and Validator Governance</a></li>
 </ul>
 </li>
 </ul>
@@ -416,6 +420,7 @@
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">shlex</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
@@ -497,7 +502,14 @@
         <span class="k">elif</span> <span class="n">block</span><span class="o">.</span><span class="n">is_bash</span><span class="p">():</span>
             <span class="k">if</span> <span class="s2">&quot;no_execute&quot;</span> <span class="ow">in</span> <span class="n">block</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
                 <span class="k">continue</span>
-            <span class="n">cmd</span> <span class="o">=</span> <span class="n">block</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">cmd</span> <span class="o">=</span> <span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">block</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+            <span class="c1"># Use the current Python interpreter for python commands</span>
+            <span class="k">if</span> <span class="n">cmd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;python3&quot;</span><span class="p">):</span>
+                <span class="n">cmd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span>
+            <span class="c1"># Replace ls with a cross-platform Python equivalent</span>
+            <span class="k">elif</span> <span class="n">cmd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;ls&quot;</span><span class="p">:</span>
+                <span class="n">target</span> <span class="o">=</span> <span class="n">cmd</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;.&quot;</span>
+                <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">&quot;-c&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;import os; print(chr(10).join(sorted(os.listdir(</span><span class="si">{</span><span class="n">target</span><span class="si">!r}</span><span class="s2">))))&quot;</span><span class="p">]</span>
             <span class="k">if</span> <span class="s2">&quot;&gt;&quot;</span> <span class="ow">in</span> <span class="n">cmd</span><span class="p">:</span>
                 <span class="c1"># redirects not support in subprocess.run</span>
                 <span class="n">pos</span> <span class="o">=</span> <span class="n">cmd</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;&gt;&quot;</span><span class="p">)</span>
@@ -511,12 +523,12 @@
                 <span class="n">outpath</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Executing: </span><span class="si">{</span><span class="n">cmd</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="n">r</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">directory</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-            <span class="n">block</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+            <span class="n">block</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">outpath</span><span class="p">:</span>
                 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">outpath</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">stream</span><span class="p">:</span>
                     <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WRITING </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">block</span><span class="o">.</span><span class="n">output</span><span class="p">)</span><span class="si">}</span><span class="s2"> CHARS TO = </span><span class="si">{</span><span class="n">outpath</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                     <span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">block</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
-            <span class="n">block</span><span class="o">.</span><span class="n">error</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+            <span class="n">block</span><span class="o">.</span><span class="n">error</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;OUT [sample] = </span><span class="si">{</span><span class="n">block</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">30</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">block</span><span class="o">.</span><span class="n">expected_fail</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -533,7 +545,9 @@
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Success!&quot;</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">block</span><span class="o">.</span><span class="n">is_stdout</span><span class="p">():</span>
-            <span class="k">if</span> <span class="s2">&quot;compare_rdf&quot;</span> <span class="ow">in</span> <span class="n">block</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">&quot;no_compare&quot;</span> <span class="ow">in</span> <span class="n">block</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Skipping comparison (no_compare annotation)&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="s2">&quot;compare_rdf&quot;</span> <span class="ow">in</span> <span class="n">block</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
                 <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;SKIPPING RDF COMPARISON. TODO: https://github.com/linkml/linkml/issues/427&quot;</span><span class="p">)</span>
             <span class="k">elif</span> <span class="n">last_block</span><span class="o">.</span><span class="n">output</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">last_block</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">!=</span> <span class="n">block</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
@@ -713,7 +727,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2021-2024, LinkML Authors
+                Copyright &#169; 2021-2026, LinkML Authors
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

@@ -269,6 +269,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqltable.html">SQL DDL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqlalchemy.html">SQL Alchemy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sqlvalidation.html">SQL Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generators/typedb.html">TypeDB / TypeQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/linkml.html">LinkML Generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/prefixmap.html">Prefix Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/sssom.html">SSSOM</a></li>
@@ -277,6 +278,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/csv.html">CSV</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/yaml.html">Yaml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generators/pandera.html">Pandera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generators/dashboard.html">Generator Feature Dashboard</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../generators/common/index.html">Common</a><input aria-label="Toggle navigation of Common" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../generators/common/build.html">Build</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../generators/common/lifecycle.html">Lifecycle</a></li>
@@ -298,6 +300,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../howtos/generate-ai-prompts.html">How to Generate AI prompts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../howtos/deprecating-elements.html">Deprecating elements while maintaining PURLs and other URIs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../howtos/ontologies-as-values.html">Using ontology terms as values in data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../howtos/implements-instantiates-guide.html">Implements vs Instantiates vs Inheritance: A Best Practices Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../howtos/skip-logic.html">How to implement skip logic in LinkML</a></li>
 </ul>
 </li>
@@ -360,6 +363,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../maintainers/organization.html">GitHub Organization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../maintainers/deprecation.html">Deprecations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../maintainers/code-of-conduct.html">Code of Conduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../maintainers/generator-governance.html">Generator and Validator Governance</a></li>
 </ul>
 </li>
 </ul>
@@ -413,7 +417,6 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">linkml.utils.generator</span><span class="w"> </span><span class="kn">import</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">shared_arguments</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">linkml_runtime.linkml_model.meta</span><span class="w"> </span><span class="kn">import</span> <span class="n">ClassDefinition</span><span class="p">,</span> <span class="n">ElementName</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">linkml_runtime.utils.formatutils</span><span class="w"> </span><span class="kn">import</span> <span class="n">underscore</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">linkml_runtime.utils.schemaview</span><span class="w"> </span><span class="kn">import</span> <span class="n">SchemaView</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">linkml_runtime.utils.yamlutils</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypedNode</span><span class="p">,</span> <span class="n">extended_float</span><span class="p">,</span> <span class="n">extended_int</span><span class="p">,</span> <span class="n">extended_str</span>
 
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
@@ -423,6 +426,36 @@
 <a class="viewcode-back" href="../../../generators/shacl.html#linkml.generators.shaclgen.ShaclGenerator">[docs]</a>
 <span class="nd">@dataclass</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">ShaclGenerator</span><span class="p">(</span><span class="n">Generator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate SHACL (Shapes Constraint Language) shapes from a LinkML schema.</span>
+
+<span class="sd">    SHACL shapes are used to validate RDF data. Each LinkML class is converted</span>
+<span class="sd">    to a ``sh:NodeShape`` with property constraints derived from the class&#39;s slots.</span>
+
+<span class="sd">    Shape Naming Modes</span>
+<span class="sd">    ------------------</span>
+<span class="sd">    The generator supports two naming modes controlled by ``use_class_uri_names``:</span>
+
+<span class="sd">    **Default mode** (``use_class_uri_names=True``):</span>
+<span class="sd">        Shapes are named using the ``class_uri``. If multiple LinkML classes share</span>
+<span class="sd">        the same ``class_uri``, their properties are merged into a single shape.</span>
+<span class="sd">        This is the traditional RDF-centric behavior.</span>
+
+<span class="sd">        Example: LinkML classes ``Entity`` and ``EvaluatedEntity`` both with</span>
+<span class="sd">        ``class_uri prov:Entity`` produce a single shape ``&lt;prov:Entity&gt;``.</span>
+
+<span class="sd">    **Native names mode** (``use_class_uri_names=False``):</span>
+<span class="sd">        Shapes are named using the native LinkML class name from the schema.</span>
+<span class="sd">        Each LinkML class produces a distinct shape, even if they share a ``class_uri``.</span>
+<span class="sd">        The ``sh:targetClass`` still correctly points to the ``class_uri``.</span>
+
+<span class="sd">        Example: The same two classes produce two shapes, each with</span>
+<span class="sd">        ``sh:targetClass prov:Entity``.</span>
+
+<span class="sd">    Use native names mode when multiple LinkML classes intentionally map to the</span>
+<span class="sd">    same external ontology class and you need distinct validation shapes per class.</span>
+<span class="sd">    See `#3011 &lt;https://github.com/linkml/linkml/issues/3011&gt;`_ for background.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="c1"># ClassVars</span>
     <span class="n">closed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;True means add &#39;sh:closed=true&#39; to all shapes, except of mixin shapes and shapes, that have parents&quot;&quot;&quot;</span>
@@ -433,7 +466,15 @@
     <span class="n">exclude_imports</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;If True, elements from imported ontologies won&#39;t be included in the generator&#39;s output&quot;&quot;&quot;</span>
     <span class="n">use_class_uri_names</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;If True, shapes use class_uri for names. If False, shapes use native LinkML class names. Suffixes still work.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Control how SHACL shape URIs are generated.</span>
+
+<span class="sd">    If True (default): Shape URIs are derived from class_uri. Classes sharing a class_uri</span>
+<span class="sd">    will be merged into a single shape.</span>
+
+<span class="sd">    If False: Shape URIs use native LinkML class names. Each class gets a distinct shape</span>
+<span class="sd">    even when sharing class_uri. The --suffix option still works in either mode.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">expand_subproperty_of</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;If True, expand subproperty_of to sh:in constraints with slot descendants&quot;&quot;&quot;</span>
     <span class="n">generatorname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
@@ -441,10 +482,9 @@
     <span class="n">valid_formats</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ttl&quot;</span><span class="p">]</span>
     <span class="n">file_extension</span> <span class="o">=</span> <span class="s2">&quot;shacl.ttl&quot;</span>
     <span class="n">visit_all_class_slots</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="n">uses_schemaloader</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">uses_schemaloader</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">schemaview</span> <span class="o">=</span> <span class="n">SchemaView</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">schema</span><span class="p">)</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">__post_init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generate_header</span><span class="p">()</span>
 
@@ -539,7 +579,10 @@
                     <span class="n">prop_pv_literal</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">minCount</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">minimum_cardinality</span><span class="p">)</span>
                 <span class="k">elif</span> <span class="n">s</span><span class="o">.</span><span class="n">exact_cardinality</span><span class="p">:</span>
                     <span class="n">prop_pv_literal</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">minCount</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">exact_cardinality</span><span class="p">)</span>
-                <span class="k">elif</span> <span class="n">s</span><span class="o">.</span><span class="n">required</span><span class="p">:</span>
+                <span class="c1"># Identifiers map to the node&#39;s IRI rather than a property triple,</span>
+                <span class="c1"># so there&#39;s no arc to constrain with sh:minCount 1 — emitting it</span>
+                <span class="c1"># would cause spurious violations on every instance.</span>
+                <span class="k">elif</span> <span class="n">s</span><span class="o">.</span><span class="n">required</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">s</span><span class="o">.</span><span class="n">identifier</span><span class="p">:</span>
                     <span class="n">prop_pv_literal</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">minCount</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
                 <span class="c1"># maxCount</span>
                 <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">maximum_cardinality</span><span class="p">:</span>
@@ -613,11 +656,14 @@
                             <span class="p">)</span>
 
                     <span class="k">if</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">all_classes</span><span class="p">:</span>
+                        <span class="n">cls_def</span> <span class="o">=</span> <span class="n">sv</span><span class="o">.</span><span class="n">get_class</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+                        <span class="n">is_any</span> <span class="o">=</span> <span class="n">cls_def</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cls_def</span><span class="p">,</span> <span class="s2">&quot;class_uri&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;linkml:Any&quot;</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">_add_class</span><span class="p">(</span><span class="n">prop_pv</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
-                        <span class="k">if</span> <span class="n">sv</span><span class="o">.</span><span class="n">get_identifier_slot</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                            <span class="n">prop_pv</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">nodeKind</span><span class="p">,</span> <span class="n">SH</span><span class="o">.</span><span class="n">IRI</span><span class="p">)</span>
-                        <span class="k">else</span><span class="p">:</span>
-                            <span class="n">prop_pv</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">nodeKind</span><span class="p">,</span> <span class="n">SH</span><span class="o">.</span><span class="n">BlankNodeOrIRI</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_any</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="n">sv</span><span class="o">.</span><span class="n">get_identifier_slot</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                                <span class="n">prop_pv</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">nodeKind</span><span class="p">,</span> <span class="n">SH</span><span class="o">.</span><span class="n">IRI</span><span class="p">)</span>
+                            <span class="k">else</span><span class="p">:</span>
+                                <span class="n">prop_pv</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">nodeKind</span><span class="p">,</span> <span class="n">SH</span><span class="o">.</span><span class="n">BlankNodeOrIRI</span><span class="p">)</span>
                     <span class="k">elif</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">sv</span><span class="o">.</span><span class="n">all_types</span><span class="p">():</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">_add_type</span><span class="p">(</span><span class="n">prop_pv</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
                     <span class="k">elif</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">sv</span><span class="o">.</span><span class="n">all_enums</span><span class="p">():</span>
@@ -645,12 +691,27 @@
 
         <span class="k">return</span> <span class="n">g</span>
 
+    <span class="n">LINKML_ANY_URI</span> <span class="o">=</span> <span class="s2">&quot;https://w3id.org/linkml/Any&quot;</span>
+
     <span class="k">def</span><span class="w"> </span><span class="nf">_add_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="n">ElementName</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add an sh:class constraint for range class *r*.</span>
+
+<span class="sd">        Skips the constraint when *r* resolves to ``linkml:Any`` — the</span>
+<span class="sd">        LinkML meta-type representing an unconstrained range.  Emitting</span>
+<span class="sd">        ``sh:class linkml:Any`` in SHACL output is incorrect because the</span>
+<span class="sd">        ``linkml:Any`` class is never instantiated in real data; it would</span>
+<span class="sd">        cause every instance to fail validation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">sv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">schemaview</span>
+        <span class="bp">cls</span> <span class="o">=</span> <span class="n">sv</span><span class="o">.</span><span class="n">get_class</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">cls</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;class_uri&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;linkml:Any&quot;</span><span class="p">:</span>
+            <span class="k">return</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_class_uri_names</span><span class="p">:</span>
             <span class="n">range_ref</span> <span class="o">=</span> <span class="n">sv</span><span class="o">.</span><span class="n">get_uri</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">range_ref</span> <span class="o">=</span> <span class="n">sv</span><span class="o">.</span><span class="n">get_uri</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">native</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">range_ref</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">LINKML_ANY_URI</span><span class="p">:</span>
+            <span class="k">return</span>
         <span class="n">func</span><span class="p">(</span><span class="n">SH</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">],</span> <span class="n">URIRef</span><span class="p">(</span><span class="n">range_ref</span><span class="p">))</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_add_enum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="n">ElementName</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -667,12 +728,37 @@
         <span class="p">)</span>
         <span class="n">func</span><span class="p">(</span><span class="n">SH</span><span class="p">[</span><span class="s2">&quot;in&quot;</span><span class="p">],</span> <span class="n">pv_node</span><span class="p">)</span>
 
+    <span class="c1"># Type URIs denoting non-literal (IRI or blank-node) values.</span>
+    <span class="c1"># SHACL §4.8.1 &lt;https://www.w3.org/TR/shacl/#NodeKindConstraintComponent&gt;</span>
+    <span class="c1"># defines sh:IRI, sh:BlankNode, and sh:BlankNodeOrIRI as valid node kinds.</span>
+    <span class="c1"># These URIs map to sh:IRI or sh:BlankNodeOrIRI constraints (never sh:Literal).</span>
+    <span class="n">_NON_LITERAL_TYPE_URIS</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;xsd:anyURI&quot;</span><span class="p">,</span>  <span class="c1"># uri, uriorcurie → sh:IRI</span>
+            <span class="s2">&quot;http://www.w3.org/ns/shex#nonLiteral&quot;</span><span class="p">,</span>  <span class="c1"># nodeidentifier → sh:BlankNodeOrIRI</span>
+            <span class="s2">&quot;http://www.w3.org/ns/shex#iri&quot;</span><span class="p">,</span>  <span class="c1"># future-proofing → sh:IRI</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="c1"># IRI-only subset: uri/uriorcurie must be strict IRI references (sh:IRI),</span>
+    <span class="c1"># while nodeidentifier (shex:nonLiteral) allows blank nodes too (sh:BlankNodeOrIRI).</span>
+    <span class="c1"># See RDF 1.1 §3.2–3.3 &lt;https://www.w3.org/TR/rdf11-concepts/#section-IRIs&gt;.</span>
+    <span class="n">_IRI_ONLY_TYPE_URIS</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;xsd:anyURI&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+
     <span class="k">def</span><span class="w"> </span><span class="nf">_add_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="n">ElementName</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">sv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">schemaview</span>
         <span class="n">rt</span> <span class="o">=</span> <span class="n">sv</span><span class="o">.</span><span class="n">get_type</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">rt</span><span class="o">.</span><span class="n">uri</span> <span class="ow">and</span> <span class="n">rt</span><span class="o">.</span><span class="n">uri</span> <span class="o">==</span> <span class="s2">&quot;xsd:anyURI&quot;</span><span class="p">:</span>
-            <span class="n">func</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">nodeKind</span><span class="p">,</span> <span class="n">SH</span><span class="o">.</span><span class="n">IRI</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">rt</span><span class="o">.</span><span class="n">uri</span><span class="p">:</span>
+        <span class="n">type_uri</span> <span class="o">=</span> <span class="n">rt</span><span class="o">.</span><span class="n">uri</span>
+        <span class="n">expanded</span> <span class="o">=</span> <span class="n">sv</span><span class="o">.</span><span class="n">get_uri</span><span class="p">(</span><span class="n">rt</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="n">type_uri</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">type_uri</span> <span class="ow">and</span> <span class="p">(</span><span class="n">type_uri</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_NON_LITERAL_TYPE_URIS</span> <span class="ow">or</span> <span class="n">expanded</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_NON_LITERAL_TYPE_URIS</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">type_uri</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_IRI_ONLY_TYPE_URIS</span><span class="p">:</span>
+                <span class="n">func</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">nodeKind</span><span class="p">,</span> <span class="n">SH</span><span class="o">.</span><span class="n">IRI</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">func</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">nodeKind</span><span class="p">,</span> <span class="n">SH</span><span class="o">.</span><span class="n">BlankNodeOrIRI</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">type_uri</span><span class="p">:</span>
             <span class="n">func</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">nodeKind</span><span class="p">,</span> <span class="n">SH</span><span class="o">.</span><span class="n">Literal</span><span class="p">)</span>
             <span class="n">func</span><span class="p">(</span><span class="n">SH</span><span class="o">.</span><span class="n">datatype</span><span class="p">,</span> <span class="n">URIRef</span><span class="p">(</span><span class="n">sv</span><span class="o">.</span><span class="n">get_uri</span><span class="p">(</span><span class="n">rt</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)))</span>
             <span class="k">if</span> <span class="n">rt</span><span class="o">.</span><span class="n">pattern</span><span class="p">:</span>
@@ -868,7 +954,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2021-2024, LinkML Authors
+                Copyright &#169; 2021-2026, LinkML Authors
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
